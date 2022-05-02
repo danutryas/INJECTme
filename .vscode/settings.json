@@ -1,0 +1,6 @@
+{
+  "reactSnippets.settings.prettierEnabled": true,
+  "editor.formatOnSave": true,
+  "html.format.endWithNewline": false,
+  "html.format.indentHandlebars": true
+}
