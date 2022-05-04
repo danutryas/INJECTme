@@ -1,0 +1,99 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal.active {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 5;
+  height: 100vh;
+  width: 100vw;
+}
+.modal .card {
+  z-index: 10;
+  background-color: #005C69;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 380px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+.modal .card .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 32px;
+}
+.modal .card .content .download {
+  font-size: 16px;
+  font-weight: 500;
+}
+.modal .card .content .download:hover {
+  box-shadow: 0 3px 8px rgba(230, 244, 241, 0.25);
+}
+.modal .card .close {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.modal .card .close .close-button {
+  color: #E6F4F1;
+  height: 25px;
+  width: 25px;
+  border-radius: 25px;
+  background-color: #005C69;
+}
+.modal .card .close .close-button:hover {
+  background-color: #00A2A5;
+  color: #005C69;
+}
+.modal .card .check {
+  color: #00A2A5;
+  height: 84px;
+  width: 84px;
+}
+.modal .card .info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.modal .card .info h4 {
+  font-family: "exo", sans-serif;
+  font-size: 32px;
+  color: #E6F4F1;
+  font-family: 700;
+  line-height: 38px;
+}
+.modal .card .info p {
+  color: rgba(230, 244, 241, 0.6);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.btn {
+  padding: 12px 32px;
+  border-radius: 12px;
+}
+.btn.primary {
+  background-color: #00A2A5;
+  color: #E6F4F1;
+}
+.btn.secondary {
+  background-color: transparent;
+  color: #005C69;
+  border: 1px solid #00A2A5;
+}/*# sourceMappingURL=global.css.map */

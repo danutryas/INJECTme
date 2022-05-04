@@ -1,0 +1,72 @@
+@import './prefix/colors';
+@import './prefix/mixins';
+
+.banner {
+    display: flex;
+    @include constructor();
+    justify-content: space-between;
+    align-items: center;
+    height: 700px;
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        color: $c-mandatory;
+        h4 {
+            font-weight: 800;
+            font-size: 16px;
+            position: relative;
+            margin-bottom: 10px;
+            h4 span{
+                background-color: white;
+            }
+            &::after {
+                position: absolute;
+                content: "";
+                height: 3px;
+                background-color: $c-accent;
+                width: 50px;
+                bottom: -5px;
+                left: 0;
+                
+            }
+        }
+        h1 {
+            font-size: 42px;
+            line-height: 58px;
+            .accent-color {
+                color: $c-accent;
+            }
+        }
+        p {
+            font-weight: 500;
+            font-size: 16px;
+            opacity: .5;
+        }
+        .cta {
+            font-size: 24px;
+            line-height: 24px;
+            width: 100%;
+            font-family: 600;
+            display: flex;
+            margin-top: 60px;
+            gap: 20px;
+            .register {
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                
+            }
+            .next {
+                color: $c-accent;
+                border-color: $c-accent ;
+            }
+        }
+    }
+    .image {
+        width: auto;
+        img {
+            border-radius: 100px;
+        }
+    }
+}

@@ -1,3 +1,75 @@
+@import './prefix/colors';
+@import './prefix/mixins';
+
+
 header {
-    color: white;
+    @include sticky();
+    padding: 0 200px;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    background-color: $c-main;
+    &.active {
+        box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.15);
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        a {
+            color: $c-accent;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+    nav {
+        height: 100%;
+        ul {
+            height: 100%;
+            display: flex;
+            gap: 50px;
+            li {
+                display: flex;
+                align-items: center;
+                height: 50px;
+                margin-top: 15px;
+                // border-bottom: 2px solid black;
+                a {
+                    @include centering();
+                    padding: 6px 16px;   
+                    color: $c-accent;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 24px;
+                    height: 100%;
+                    width: 100%;
+                    border: 1px solid transparent;
+                    &:hover {
+                        border: 1px solid black;
+                    }
+                }
+                button {
+                    padding: 12px 32px;
+                    border-radius: 12px;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: $c-main;
+                    background-color: $c-mandatory;
+                    // box-shadow: 0px 0px 10px rgba(0, 92, 105, 0.5);
+                    &:hover{
+                        box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.3);
+                        background-color: $c-mandatory80;
+                    }
+                    &:active {
+                        box-shadow:none;
+                        background-color: $c-mandatory40;
+                    }
+                }
+            }
+        }
+    }
+
 }

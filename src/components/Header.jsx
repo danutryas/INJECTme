@@ -1,9 +1,11 @@
-import React from 'react'
-import Modal from './Cards/Modal'
+import React,{ useContext } from 'react'
+import '../styles/css/header.css'
+import ModalContext from './Context/ModalContext'
 
 function Header() {
+  const {changeModal} = useContext(ModalContext)
   return (
-    <header>
+    <header className='active'>
         <div className="logo">
             <img src={process.env.PUBLIC_URL + '/syringe50.jpg'} alt="Logo" />
             <a href="/">INJECTme</a>
@@ -11,10 +13,10 @@ function Header() {
         <nav>
             <ul>
               <li><a href="#">Home</a></li>
-              <li><a href="#">Urgency</a></li>
-              <li><a href="#">Vaccines</a></li>
+              <li><a href="#urgency">Urgency</a></li>
+              <li><a href="#vaccines">Vaccines</a></li>
               <li><a href="#">Vaccine Location</a></li>
-              <li><button className='btn primary'>Register</button></li>
+              <li><button className='btn primary' onClick={()=> changeModal()}>Register</button></li>
             </ul>
         </nav>
     </header>

@@ -1,0 +1,103 @@
+@import './prefix/colors';
+@import './prefix/mixins';
+
+.vaccines {
+    @include constructor();
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px;
+    gap: 35px;
+    .top-side {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .text {
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            h3 {
+                font-family: 'Exo',sans-serif;
+                color: $c-accent;
+                line-height: 42px;font-size: 32px;
+            }
+            p {
+                line-height: 28px;
+                width: 450px;
+                font-weight: 500;
+                font-size: 24px;
+                color: $c-mandatory;
+            }
+        }
+        .image {
+            width: 500px;
+        }
+    }
+    .vaccine-type {
+        display: flex;
+        gap: 35px;
+        justify-content: center;
+        .type1,.type2 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .dropdown {
+                background-color: $c-mandatory;
+                color: $c-main;
+                display: flex;
+                flex-direction: column;
+                height: 50px;
+                width: 500px;
+                border-radius: 15px;
+                &.active {
+                    height: 250px;
+                    
+                    &:hover {
+                        cursor: pointer;
+                        .heading {
+                            border-radius: 10px;
+                            width: 490px;
+                            height: 40px;
+                            padding: 15px 15px;
+                            margin: 5px;
+                            background-color: transparent;
+                        }
+                    }
+                    p.desc {
+                        display: block;
+                        padding: 0 20px;
+                    }
+                }
+                &:hover {
+                    cursor: pointer;
+                    .heading {
+                        border-radius: 10px;
+                        width: 490px;
+                        height: 40px;
+                        padding: 15px 15px;
+                        margin: 5px;
+                        background-color: $c-accent;
+                        
+                    }
+                }
+                .heading {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 15px 20px;
+                    align-items: center;
+                    h4 {
+                        text-transform: uppercase;
+                    }
+                    .drop-icon {
+                        height: 20px;
+                        width: 32px;
+                    }
+                }
+                p.desc {
+                    display: none;
+                }
+                
+            }
+        }
+    }
+}

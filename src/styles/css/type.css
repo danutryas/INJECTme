@@ -1,0 +1,98 @@
+.vaccines {
+  margin: 0 250px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 120px;
+  gap: 35px;
+}
+.vaccines .top-side {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.vaccines .top-side .text {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.vaccines .top-side .text h3 {
+  font-family: "Exo", sans-serif;
+  color: #005C69;
+  line-height: 42px;
+  font-size: 32px;
+}
+.vaccines .top-side .text p {
+  line-height: 28px;
+  width: 450px;
+  font-weight: 500;
+  font-size: 24px;
+  color: #00A2A5;
+}
+.vaccines .top-side .image {
+  width: 500px;
+}
+.vaccines .vaccine-type {
+  display: flex;
+  gap: 35px;
+  justify-content: center;
+}
+.vaccines .vaccine-type .type1, .vaccines .vaccine-type .type2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.vaccines .vaccine-type .type1 .dropdown, .vaccines .vaccine-type .type2 .dropdown {
+  background-color: #00A2A5;
+  color: #E6F4F1;
+  display: flex;
+  flex-direction: column;
+  height: 50px;
+  width: 500px;
+  border-radius: 15px;
+}
+.vaccines .vaccine-type .type1 .dropdown.active, .vaccines .vaccine-type .type2 .dropdown.active {
+  height: 250px;
+}
+.vaccines .vaccine-type .type1 .dropdown.active:hover, .vaccines .vaccine-type .type2 .dropdown.active:hover {
+  cursor: pointer;
+}
+.vaccines .vaccine-type .type1 .dropdown.active:hover .heading, .vaccines .vaccine-type .type2 .dropdown.active:hover .heading {
+  border-radius: 10px;
+  width: 490px;
+  height: 40px;
+  padding: 15px 15px;
+  margin: 5px;
+  background-color: transparent;
+}
+.vaccines .vaccine-type .type1 .dropdown.active p.desc, .vaccines .vaccine-type .type2 .dropdown.active p.desc {
+  display: block;
+  padding: 0 20px;
+}
+.vaccines .vaccine-type .type1 .dropdown:hover, .vaccines .vaccine-type .type2 .dropdown:hover {
+  cursor: pointer;
+}
+.vaccines .vaccine-type .type1 .dropdown:hover .heading, .vaccines .vaccine-type .type2 .dropdown:hover .heading {
+  border-radius: 10px;
+  width: 490px;
+  height: 40px;
+  padding: 15px 15px;
+  margin: 5px;
+  background-color: #005C69;
+}
+.vaccines .vaccine-type .type1 .dropdown .heading, .vaccines .vaccine-type .type2 .dropdown .heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  align-items: center;
+}
+.vaccines .vaccine-type .type1 .dropdown .heading h4, .vaccines .vaccine-type .type2 .dropdown .heading h4 {
+  text-transform: uppercase;
+}
+.vaccines .vaccine-type .type1 .dropdown .heading .drop-icon, .vaccines .vaccine-type .type2 .dropdown .heading .drop-icon {
+  height: 20px;
+  width: 32px;
+}
+.vaccines .vaccine-type .type1 .dropdown p.desc, .vaccines .vaccine-type .type2 .dropdown p.desc {
+  display: none;
+}/*# sourceMappingURL=type.css.map */

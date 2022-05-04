@@ -1,14 +1,19 @@
 import React from 'react'
+import { IconContext } from "react-icons";
 
-function BenefitCard({src,title,desc}) {
+function BenefitCard({icon,title,desc}) {
   return (
-    <div className='benefit'>
-        <img src={src} alt="logo" />
-        <div className="desc">
-            <h4>{title}</h4>
-            <p>{desc}</p>
-        </div>
-    </div>
+      <div className='benefit '>
+          <div className="image">
+            <IconContext.Provider value={{  className: "content" }}>
+              {icon}
+            </IconContext.Provider>
+          </div>
+          <div className="desc">
+              <h4>{title}</h4>
+              <p>{desc}</p>
+          </div>
+      </div>
   )
 }
 

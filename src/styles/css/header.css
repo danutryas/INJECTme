@@ -1,0 +1,72 @@
+header {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  padding: 0 200px;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+  background-color: #E6F4F1;
+}
+header.active {
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.15);
+}
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+header .logo a {
+  color: #005C69;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+header nav {
+  height: 100%;
+}
+header nav ul {
+  height: 100%;
+  display: flex;
+  gap: 50px;
+}
+header nav ul li {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin-top: 15px;
+}
+header nav ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 16px;
+  color: #005C69;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  height: 100%;
+  width: 100%;
+  border: 1px solid transparent;
+}
+header nav ul li a:hover {
+  border: 1px solid black;
+}
+header nav ul li button {
+  padding: 12px 32px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #E6F4F1;
+  background-color: #00A2A5;
+}
+header nav ul li button:hover {
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 162, 165, 0.8);
+}
+header nav ul li button:active {
+  box-shadow: none;
+  background-color: rgba(0, 162, 165, 0.4);
+}/*# sourceMappingURL=header.css.map */

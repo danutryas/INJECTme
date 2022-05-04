@@ -1,9 +1,19 @@
 import React from 'react'
 import BenefitCard from './Cards/BenefitCard'
+import '../styles/css/urgency.css'
+import {FaBiohazard} from 'react-icons/fa'
+
 
 function Urgency() {
+    const benefits = [
+        {icon:<FaBiohazard />,title:"",desc:""},
+        {icon:<FaBiohazard />,title:"",desc:""},
+        {icon:<FaBiohazard />,title:"",desc:""},
+        {icon:<FaBiohazard />,title:"",desc:""}
+    ]
+
   return (
-    <div className='urgency'>
+    <div className='urgency' id='urgency'>
         <div className="top-side">
             <div className="image">
                 <img src={process.env.PUBLIC_URL + '/vaccine.png'} alt="vaccine" />
@@ -14,12 +24,13 @@ function Urgency() {
             </div>
         </div>
         <div className="bottom-side">
-            <h4>BENEFITS OF COVID VACCINATION:</h4>
+            <h4>BENEFITS OF COVID VACCINATION</h4>
             <div className="benefit-list">
-                <BenefitCard title="Lorem" desc="lorem ipsum el mona"/>
-                <BenefitCard title="Lorem" desc="lorem ipsum el mona"/>
-                <BenefitCard title="Lorem" desc="lorem ipsum el mona"/>
-                <BenefitCard title="Lorem" desc="lorem ipsum el mona"/>
+                {benefits.map((benefit) => {
+                    return(
+                        <BenefitCard icon={benefit.icon} title={benefit.title} desc={benefit.desc}/>
+                    )
+                })}
             </div>
         </div>
     </div>

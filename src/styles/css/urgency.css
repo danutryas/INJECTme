@@ -1,0 +1,108 @@
+.urgency {
+  margin: 0 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  position: relative;
+  padding-top: 120px;
+}
+.urgency .top-side {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.urgency .top-side .image {
+  width: 500px;
+}
+.urgency .top-side .text {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.urgency .top-side .text h3 {
+  font-family: "Exo", sans-serif;
+  color: #005C69;
+  line-height: 42px;
+  font-size: 32px;
+}
+.urgency .top-side .text p {
+  line-height: 28px;
+  width: 450px;
+  font-weight: 500;
+  font-size: 24px;
+  color: #00A2A5;
+}
+.urgency .bottom-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.urgency .bottom-side > h4 {
+  font-family: "Exo", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #005C69;
+}
+.urgency .bottom-side .benefit-list {
+  display: flex;
+  gap: 25px;
+}
+.urgency .bottom-side .benefit-list .benefit {
+  width: 240px;
+  height: 250px;
+  background-color: #4AB9BB;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.urgency .bottom-side .benefit-list .benefit .image {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.urgency .bottom-side .benefit-list .benefit .image .content {
+  height: 50px;
+  width: 50px;
+  color: #005C69;
+}
+.urgency .bottom-side .benefit-list .benefit .desc {
+  border-radius: 15px;
+  height: 50px;
+  padding: 15px;
+  background-color: #00A2A5;
+  color: #E6F4F1;
+}
+.urgency .bottom-side .benefit-list .benefit .desc h4 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+}
+.urgency .bottom-side .benefit-list .benefit .desc p {
+  display: none;
+}
+.urgency .bottom-side .benefit-list .benefit:hover .image {
+  height: 125px;
+}
+.urgency .bottom-side .benefit-list .benefit:hover .desc {
+  height: 125px;
+}
+.urgency .bottom-side .benefit-list .benefit:hover .desc p {
+  display: block;
+}
+.urgency .bottom-side .benefit-list .benefit.active .image {
+  filter: brightness(0.8);
+  height: 100px;
+}
+.urgency .bottom-side .benefit-list .benefit.active .desc {
+  height: 150px;
+}
+.urgency .bottom-side .benefit-list .benefit.active .desc h4 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+}
+.urgency .bottom-side .benefit-list .benefit.active .desc p {
+  display: block;
+}/*# sourceMappingURL=urgency.css.map */

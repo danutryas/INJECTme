@@ -1,0 +1,16 @@
+@mixin constructor() {
+    margin: 0 250px;
+}
+@mixin constructor2() {
+    padding: 0 250px;
+}
+@mixin sticky {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+}
+@mixin centering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

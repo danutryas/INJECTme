@@ -1,9 +1,11 @@
 import React from 'react'
 import VaccineDropdown from './Dropdown/VaccineDropdown'
+import '../styles/css/type.css'
 
 function Types() {
+    
   return (
-    <div className='vaccines'>
+    <div className='vaccines' id='vaccines'>
         <div className="top-side">
             <div className="text">
                 <h3>GET TO KNOW THE TYPES</h3>
@@ -14,12 +16,16 @@ function Types() {
             </div>
         </div>
         <div className="vaccine-type">
-            <VaccineDropdown />
-            <VaccineDropdown />
-            <VaccineDropdown />
-            <VaccineDropdown />
-            <VaccineDropdown />
-            <VaccineDropdown />
+            <div className="type1">
+                <VaccineDropdown  title={"asdas"} desc="lorem12"/>
+                <VaccineDropdown  title={"asdas"} desc="lorem12"/>
+                <VaccineDropdown  title={"asdas"} desc="lorem12"/>
+            </div>
+            <div className="type2">
+                <VaccineDropdown  title={"asdas"} desc="lorem12"/>
+                <VaccineDropdown  title={"asdas"} desc="lorem12"/>
+                <VaccineDropdown  title={"asdas"} desc="lorem12"/>
+            </div>
         </div>
     </div>
   )

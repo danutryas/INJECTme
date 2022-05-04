@@ -1,0 +1,67 @@
+.banner {
+  display: flex;
+  margin: 0 250px;
+  justify-content: space-between;
+  align-items: center;
+  height: 700px;
+}
+.banner .text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #00A2A5;
+}
+.banner .text h4 {
+  font-weight: 800;
+  font-size: 16px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.banner .text h4 h4 span {
+  background-color: white;
+}
+.banner .text h4::after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  background-color: #005C69;
+  width: 50px;
+  bottom: -5px;
+  left: 0;
+}
+.banner .text h1 {
+  font-size: 42px;
+  line-height: 58px;
+}
+.banner .text h1 .accent-color {
+  color: #005C69;
+}
+.banner .text p {
+  font-weight: 500;
+  font-size: 16px;
+  opacity: 0.5;
+}
+.banner .text .cta {
+  font-size: 24px;
+  line-height: 24px;
+  width: 100%;
+  font-family: 600;
+  display: flex;
+  margin-top: 60px;
+  gap: 20px;
+}
+.banner .text .cta .register {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.banner .text .cta .next {
+  color: #005C69;
+  border-color: #005C69;
+}
+.banner .image {
+  width: auto;
+}
+.banner .image img {
+  border-radius: 100px;
+}/*# sourceMappingURL=banner.css.map */
