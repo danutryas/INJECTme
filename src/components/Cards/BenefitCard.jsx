@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { IconContext } from "react-icons";
 
-function BenefitCard({icon,title,desc}) {
+function BenefitCard({index,icon,title,desc}) {
+  const [activeCard,setActiveCard] = useState(false)
+
   return (
-      <div className='benefit '>
+      <div className={`benefit ${activeCard ? "active" :""}`} onClick={()=>setActiveCard(prev =>!prev)}>
           <div className="image">
             <IconContext.Provider value={{  className: "content" }}>
               {icon}

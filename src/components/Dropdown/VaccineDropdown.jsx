@@ -2,16 +2,15 @@ import React, { useState } from 'react'
 import { IconContext } from 'react-icons';
 import {RiArrowDownSLine,RiArrowUpSLine} from 'react-icons/ri'
 
-function VaccineDropdown({title,desc}) {
+function VaccineDropdown({index,title,desc}) {
   const [activeDropdown,setActiveDropdown] = useState(false)
 
     const dropdownClick = () => {
         setActiveDropdown(prev => !prev)
     }
 
-
   return (
-    <div className={`dropdown ${activeDropdown ? "active" : ""}`} onClick={dropdownClick}>
+    <div className={`dropdown ${activeDropdown ? "active" : ""}`} onClick={dropdownClick} >
         <div className="heading">
             <h4>{title}</h4>
             <IconContext.Provider value={{  className: "drop-icon" }}>

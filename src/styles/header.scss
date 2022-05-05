@@ -17,6 +17,7 @@ header {
         display: flex;
         align-items: center;
         gap: 15px;
+        cursor: pointer;
         a {
             color: $c-accent;
             font-weight: 600;
@@ -30,12 +31,30 @@ header {
             height: 100%;
             display: flex;
             gap: 50px;
+            
             li {
                 display: flex;
                 align-items: center;
                 height: 50px;
                 margin-top: 15px;
-                // border-bottom: 2px solid black;
+                position: relative;
+                border-bottom: 1px solid transparent;
+                border-radius: 10px;
+                &.active {
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        height: 2px;
+                        width: 50px;
+                        background-color: $c-mandatory;
+                        animation: 120ms linear slideIn;
+                        
+                    }
+                }
+                
                 a {
                     @include centering();
                     padding: 6px 16px;   
@@ -46,11 +65,15 @@ header {
                     height: 100%;
                     width: 100%;
                     border: 1px solid transparent;
-                    &:hover {
-                        border: 1px solid black;
+                    background-color: transparent; 
+                    &:focus {
+                        background-image:linear-gradient(45deg,rgba($c-accent, 0.1),rgba(0,0,0,.00),rgba(0,0,0,.00),rgba($c-accent, 0.1));
                     }
                 }
-                button {
+                &:hover,&:focus {
+                    background-image:linear-gradient(45deg,rgba($c-accent, 0.1),rgba(0,0,0,.00),rgba(0,0,0,.00),rgba($c-accent, 0.1));
+                }
+                button.register {
                     padding: 12px 32px;
                     border-radius: 12px;
                     font-weight: 600;
@@ -71,5 +94,17 @@ header {
             }
         }
     }
+}
 
+@keyframes slideIn {
+    from      {
+        width: 0;
+        transform: translateX(-25px);
+    }
+    10%     {width: 5px;transform: translateX(-25px);}
+    25%     {width: 12.5px;transform: translateX(-25px);}
+    50%     {width: 25px;transform: translateX(-25px);}
+    75%     {width: 37.5px;transform: translateX(-25px);}
+    90%     {width: 45px;transform: translateX(-25px);}
+    to      {width: 50px; transform: translateX(-25px);}
 }

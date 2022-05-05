@@ -1,10 +1,10 @@
-import React,{useContext} from 'react'
+import React,{useState, useContext, useEffect} from 'react'
 import {HiArrowNarrowRight} from 'react-icons/hi'
 import '../styles/css/banner.css'
 import ModalContext  from './Context/ModalContext'
+import { IconContext } from 'react-icons'
 
 function Banner() {
-
     const {changeModal} = useContext(ModalContext)
 
   return (
@@ -16,7 +16,9 @@ function Banner() {
             <div className="cta">
                 <button className='btn primary register' onClick={()=> changeModal()}>
                     Register
-                    <HiArrowNarrowRight/>
+                    <IconContext.Provider value={{ className:"arrow-btn"}}>
+                        <HiArrowNarrowRight/>
+                    </IconContext.Provider>
                 </button>
                 <a href="#urgency"><button className='btn secondary next' >Find out more</button></a>
             </div>

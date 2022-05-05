@@ -50,9 +50,10 @@
   height: 50px;
   width: 500px;
   border-radius: 15px;
+  animation: 2s ease-in-out height;
 }
 .vaccines .vaccine-type .type1 .dropdown.active, .vaccines .vaccine-type .type2 .dropdown.active {
-  height: 250px;
+  height: auto;
 }
 .vaccines .vaccine-type .type1 .dropdown.active:hover, .vaccines .vaccine-type .type2 .dropdown.active:hover {
   cursor: pointer;
@@ -67,7 +68,8 @@
 }
 .vaccines .vaccine-type .type1 .dropdown.active p.desc, .vaccines .vaccine-type .type2 .dropdown.active p.desc {
   display: block;
-  padding: 0 20px;
+  padding: 0 20px 15px 20px;
+  line-height: 24px;
 }
 .vaccines .vaccine-type .type1 .dropdown:hover, .vaccines .vaccine-type .type2 .dropdown:hover {
   cursor: pointer;

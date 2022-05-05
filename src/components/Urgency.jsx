@@ -6,10 +6,10 @@ import {FaBiohazard} from 'react-icons/fa'
 
 function Urgency() {
     const benefits = [
-        {icon:<FaBiohazard />,title:"",desc:""},
-        {icon:<FaBiohazard />,title:"",desc:""},
-        {icon:<FaBiohazard />,title:"",desc:""},
-        {icon:<FaBiohazard />,title:"",desc:""}
+        {id:1,icon:<FaBiohazard />,title:"",desc:""},
+        {id:2,icon:<FaBiohazard />,title:"",desc:""},
+        {id:3,icon:<FaBiohazard />,title:"",desc:""},
+        {id:4,icon:<FaBiohazard />,title:"",desc:""}
     ]
 
   return (
@@ -28,7 +28,7 @@ function Urgency() {
             <div className="benefit-list">
                 {benefits.map((benefit) => {
                     return(
-                        <BenefitCard icon={benefit.icon} title={benefit.title} desc={benefit.desc}/>
+                        <BenefitCard key={benefit.id} icon={benefit.icon} title={benefit.title} desc={benefit.desc}/>
                     )
                 })}
             </div>

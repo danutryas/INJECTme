@@ -55,11 +55,21 @@
                 display: flex;
                 gap: 5px;
                 align-items: center;
-                
+                font-size: 18px;
+                font-weight: 500;
+                padding: 15px 30px;
+                &:hover {
+                    .arrow-btn {
+                        transform: translateX(10px);
+                    }
+                }
             }
             .next {
-                color: $c-accent;
-                border-color: $c-accent ;
+                padding: 15px 30px;
+                font-size: 18px;
+                font-weight: 500;
+                color: $c-mandatory;
+                border:3px solid $c-mandatory ;
             }
         }
     }

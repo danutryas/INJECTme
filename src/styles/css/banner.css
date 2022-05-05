@@ -54,10 +54,19 @@
   display: flex;
   gap: 5px;
   align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 15px 30px;
+}
+.banner .text .cta .register:hover .arrow-btn {
+  transform: translateX(10px);
 }
 .banner .text .cta .next {
-  color: #005C69;
-  border-color: #005C69;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #00A2A5;
+  border: 3px solid #00A2A5;
 }
 .banner .image {
   width: auto;

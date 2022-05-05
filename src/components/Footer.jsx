@@ -6,7 +6,7 @@ import { IconContext } from 'react-icons'
 
 function Footer() {
   return (
-    <footer>
+    <footer id='footer'>
       <nav>
         <div className="contact">
           <h4 className='title'>Contact Us</h4>

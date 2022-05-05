@@ -6,12 +6,15 @@ import Header from '../components/Header'
 import Types from '../components/Types'
 import Urgency from '../components/Urgency'
 import ModalContext from '../components/Context/ModalContext'
+import { ScrollProvider } from "../components/Context/ScrollContext";
+
 
 function Landing() {
   const { modalStatus } = useContext(ModalContext)
   
   return (
     <>
+      <ScrollProvider>
         <Header />
         <div className={`container ${modalStatus ? "active":""}`}>
           <Banner />
@@ -20,6 +23,7 @@ function Landing() {
           <Types />
         </div>
         <Footer />
+      </ScrollProvider>
     </>
   )
 }
