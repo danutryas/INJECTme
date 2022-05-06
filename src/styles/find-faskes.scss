@@ -1,0 +1,209 @@
+@import './prefix/colors';
+@import './prefix/mixins';
+
+.find-container {
+    @include constructor();
+    margin-top: 140px;
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    flex-direction: column;
+    gap: 100px;
+    h1 {
+        text-align: center;
+        color: $c-accent;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 38px;
+    }
+    .search-section {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 40px;
+        & .card {
+            border: none;
+            height: 140px;
+            width: 1040px;
+            background-color: $c-main;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+        }
+        .search {
+            display: flex;
+            flex-direction: column;
+            padding: 24px 32px;
+            gap: 1rem;
+            h4 {
+                font-size: 18px;
+                font-weight: 600;
+                color: $c-accent;
+            }
+            form {
+                display: flex;
+                gap: 2rem;
+                button {
+                    font-weight: 500;
+                    font-size: 16px;
+                }
+                input,select {
+                    width: 100%;
+                    border-radius: 1rem;
+                    padding: 0 1rem;
+                    border: none;
+                    outline: none;
+                    background-color: $c-mandatory20;
+                    font-weight: 500;
+                    color: $c-accent;
+                }
+
+            }
+        }
+    }
+    section.categories {
+        display: flex;
+        flex-direction: column;
+        gap: 52px;
+        
+        h3 {
+            font-size: 24px;
+            color: $c-accent;
+            font-weight: 700;
+            position: relative;
+            &::after {
+                position: absolute;
+                content: "";
+                height: 3px;
+                width: 160px;
+                bottom: -12px;
+                left: 0;
+                background-color: $c-accent;
+            }
+        }
+        .category-list {
+            display: flex;
+            gap: 15px;
+            background-color: $c-mandatory40;
+            padding: 15px 30px;
+            border-radius: 15px;
+            width: 605px;
+            .category {
+                @include centering();
+                flex-direction: column;
+                width: 125px;
+                height: 100px;
+                gap: .5rem;
+                cursor: pointer;
+                &.card {
+                    padding: 0;
+                    margin: 0;
+                    background-color: $c-main;
+                    border: 1px solid transparent;
+                    border-radius: 15px;
+                }
+                .faskes-logo {
+                    width: 60px;
+                    background-color: $c-mandatory40;
+                    padding: 10px;
+                    @include centering();
+                    border-radius: 50%;
+                }
+                img { 
+                    width: 40px;
+                    
+                }
+                p {
+                    font-weight: 600;
+                    font-size: 14px;
+                    letter-spacing: 0.015rem;
+                }
+            }
+        }
+    }
+    .faskes-list {
+        display: grid;
+        grid-template-columns: 22rem 22rem 22rem;
+        grid-auto-rows: auto;
+        gap:40px;
+        justify-content: left;
+        .faskes-card {
+            background-color: $c-mandatory20;
+            padding: 1rem 1.5rem .5rem 1.5rem;
+            border-radius: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            .info {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                position: relative;
+                .card-category {
+                    display: flex;
+                    align-items: center;
+                    height: 20px;
+                    padding: 0 5px;
+                    gap: 4px;
+                    border: 1px solid black;
+                    width: max-content;
+                    border-radius: 5px;
+                    .card-icon {
+                        height: 14px;
+                    }
+                    p {
+                        font-size: 12px;
+                    }
+                }
+                .faskes-name {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 24px;
+                }
+                .faskes-status {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    color: rgba(#000,.5);
+                    .faskes-location{
+                        display: flex;
+                        gap: 5px;
+                        align-items: center;
+                    }
+                    .vaksin-status {
+                        display: flex;
+                        gap: 5px;
+                        align-items: center;
+                        color: $c-accent;
+                    }
+                }
+                &::after {
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    bottom: -18px;
+                    width: 100%;
+                    background-color: rgba($c-accent,.2);
+                    height: 1px;
+                }
+            }
+            .cta {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                margin-top: 10px;
+                .btn  {
+                    padding: 3px 0;
+                    line-height: 24px;
+                    border-radius: 12px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    &.primary {
+                        background-color: $c-accent;
+                    }
+                    &.secondary {
+                        border: none;
+                    }
+                }
+            }
+        }
+    }   
+}

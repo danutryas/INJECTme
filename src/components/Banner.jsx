@@ -1,4 +1,4 @@
-import React,{useState, useContext, useEffect} from 'react'
+import React,{useContext} from 'react'
 import {HiArrowNarrowRight} from 'react-icons/hi'
 import '../styles/css/banner.css'
 import ModalContext  from './Context/ModalContext'

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { IconContext } from "react-icons";
 
-function BenefitCard({index,icon,title,desc}) {
+function BenefitCard({icon,title,desc}) {
   const [activeCard,setActiveCard] = useState(false)
 
   return (
