@@ -3,6 +3,8 @@ import Modal from './Cards/Modal'
 import {AiOutlineInstagram,AiFillLinkedin,AiFillGithub,AiOutlineCopyrightCircle} from 'react-icons/ai'
 import '../styles/css/footer.css'
 import { IconContext } from 'react-icons'
+import { HashLink as Link } from 'react-router-hash-link';
+
 
 function Footer() {
   return (
@@ -30,10 +32,18 @@ function Footer() {
         <div className="content">
           <h4 className='title'>Content</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#urgency">Urgency</a></li>
-            <li><a href="#vaccines">Vaccines</a></li>
-            <li><a href="/">Vaccine Location</a></li>
+            <li>
+              <Link to={"/#"} >Home</Link>
+            </li>
+            <li>
+              <Link to={"/#urgency"} >Urgency</Link>
+            </li>
+            <li>
+              <Link to={"/#vaccines"} >Vaccines</Link>
+            </li>
+            <li>
+              <Link to={"/find#"}>Vaccine Location</Link>
+            </li>
           </ul>
         </div>
         <div className="link">

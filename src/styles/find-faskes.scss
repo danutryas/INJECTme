@@ -6,7 +6,6 @@
     margin-top: 140px;
     display: flex;
     justify-content: center;
-    // align-items: center;
     flex-direction: column;
     gap: 100px;
     h1 {
@@ -127,16 +126,16 @@
         justify-content: left;
         .faskes-card {
             background-color: $c-mandatory20;
-            padding: 1rem 1.5rem .5rem 1.5rem;
+            padding: 1rem 1.5rem calc(.5rem + 85px) 1.5rem;
             border-radius: 1.5rem;
             display: flex;
             flex-direction: column;
             gap: 1.2rem;
+            position: relative;
             .info {
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
-                position: relative;
                 .card-category {
                     display: flex;
                     align-items: center;
@@ -175,33 +174,42 @@
                         color: $c-accent;
                     }
                 }
-                &::after {
-                    position: absolute;
-                    content: "";
-                    left: 0;
-                    bottom: -18px;
-                    width: 100%;
-                    background-color: rgba($c-accent,.2);
-                    height: 1px;
-                }
             }
             .cta {
                 display: flex;
                 flex-direction: column;
                 gap: 5px;
                 margin-top: 10px;
+                position: absolute;
+                bottom: 5px;
+                width: calc(100% - 3rem);
+                &::before {
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    top: -10px;
+                    width: 100%;
+                    background-color: rgba($c-accent,.2);
+                    height: 1px;
+                }
                 .btn  {
                     padding: 3px 0;
                     line-height: 24px;
                     border-radius: 12px;
                     font-size: 14px;
                     font-weight: 600;
-                    &.primary {
-                        background-color: $c-accent;
-                    }
-                    &.secondary {
-                        border: none;
-                    }
+                    background-color: $c-accent;
+                }
+                a {
+                    padding: 3px 0;
+                    line-height: 24px;
+                    border-radius: 12px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    background-color: none;
+                    text-align: center;
+                    color: $c-mandatory;
+                    text-decoration: none;
                 }
             }
         }

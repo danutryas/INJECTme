@@ -5,7 +5,7 @@ import ModalContext  from './Context/ModalContext'
 import { IconContext } from 'react-icons'
 
 function Banner() {
-    const {changeModal} = useContext(ModalContext)
+    const {activateModal} = useContext(ModalContext)
 
   return (
     <div className='banner' id='home' >
@@ -14,7 +14,8 @@ function Banner() {
             <h1>GET <span className='accent-color'>PROTECTION.</span> <br/> TO KEEP <br /><span className='accent-color'>MOVING FORWARD.</span></h1>
             <p>Covid-19 Vaccines brings everyone closer.</p>
             <div className="cta">
-                <button className='btn primary register' onClick={()=> changeModal()}>
+                <button className='btn primary register' onClick={(e)=> activateModal(e)}>
+                    
                     Register
                     <IconContext.Provider value={{ className:"arrow-btn"}}>
                         <HiArrowNarrowRight/>

@@ -51,8 +51,6 @@ function FindLocation() {
       setFilteredData(data)
     }
   },[data,filterCategory])
-  console.log(data)
-  console.log(filteredData)
 
   const faskes = [{name:"PUSKESMAS",src:"puskesmas.png"},{name:"RUMAH SAKIT",src:"hospital.png"},{name:"KLINIK",src:"clinic.png"},{name:"FKTP",src:"fktp.png"}]  
   return (
@@ -60,13 +58,13 @@ function FindLocation() {
       <Header />
       <div className={`find-container ${modalStatus ? "active":""}`} id={"home"}>
         <h1>FIND FASKES NEARBY</h1>
-        <div className="search-section">
-          <NameSearch 
+        <div className="search-section ">
+          {/* <NameSearch 
             idProvinceInput={idProvinceInput}
             setIdProvinceInput={setIdProvinceInput}
             idStateInput={idStateInput}
             setIdStateInput={setIdStateInput}
-          />
+          /> */}
           <LocationSearch 
             idProvinceInput={idProvinceInput}
             setIdProvinceInput={setIdProvinceInput}
@@ -90,6 +88,7 @@ function FindLocation() {
         <FaskesList 
           filteredData={filteredData}
         />
+      {/* <button>Load More</button> */}
       </div>
       <Footer />
     </>

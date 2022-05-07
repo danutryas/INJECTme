@@ -6,10 +6,10 @@ import {FaBiohazard} from 'react-icons/fa'
 
 function Urgency() {
     const benefits = [
-        {id:1,icon:<FaBiohazard />,title:"",desc:""},
-        {id:2,icon:<FaBiohazard />,title:"",desc:""},
-        {id:3,icon:<FaBiohazard />,title:"",desc:""},
-        {id:4,icon:<FaBiohazard />,title:"",desc:""}
+        {id:1,icon:<FaBiohazard />,title:"Reduces risk of infection",desc:"Once you receive the shot, your body begins producing antibodies to the coronavirus."},
+        {id:2,icon:<FaBiohazard />,title:"Protects against illness",desc:"Vaccines have shown to be effective at preventing severe illness from COVID-19."},
+        {id:3,icon:<FaBiohazard />,title:"Free Transportation",desc:"Almost all of public area requires you to get vaccinated"},
+        {id:4,icon:<FaBiohazard />,title:"Protect people around you",desc:"By getting the shot, you also prevent the spreading of COVID-19"}
     ]
 
   return (

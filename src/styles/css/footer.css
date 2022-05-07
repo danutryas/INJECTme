@@ -7,7 +7,7 @@ footer {
   margin-top: 120px;
 }
 footer nav {
-  padding: 0 250px;
+  padding: 0 15rem;
   display: flex;
   justify-content: space-between;
   height: 250px;
@@ -50,7 +50,7 @@ footer nav a {
   color: #E6F4F1;
 }
 footer .comp-info {
-  padding: 0 250px;
+  padding: 0 15rem;
   height: 80px;
   display: flex;
   justify-content: space-between;
