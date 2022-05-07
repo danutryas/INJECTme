@@ -14,14 +14,8 @@ function Banner() {
             <h1>GET <span className='accent-color'>PROTECTION.</span> <br/> TO KEEP <br /><span className='accent-color'>MOVING FORWARD.</span></h1>
             <p>Covid-19 Vaccines brings everyone closer.</p>
             <div className="cta">
-                <button className='btn primary register' onClick={(e)=> activateModal(e)}>
-                    
-                    Register
-                    <IconContext.Provider value={{ className:"arrow-btn"}}>
-                        <HiArrowNarrowRight/>
-                    </IconContext.Provider>
-                </button>
-                <a href="#urgency"><button className='btn secondary next' >Find out more</button></a>
+                <button className='btn primary register' onClick={(e)=> activateModal(e)}>Register</button>
+                <a href="#urgency"><button className='btn secondary next' >Find More</button></a>
             </div>
         </div>
         <div className="image">

@@ -54,7 +54,16 @@
                     font-weight: 500;
                     color: $c-accent;
                 }
-
+                select {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    background-position: right center;
+                    background-repeat: no-repeat;
+                    background-size: 1ex;
+                    background-origin: content-box;
+                    background-size: 3%;
+                }
             }
         }
     }
@@ -92,28 +101,34 @@
                 height: 100px;
                 gap: .5rem;
                 cursor: pointer;
-                &.card {
-                    padding: 0;
-                    margin: 0;
-                    background-color: $c-main;
-                    border: 1px solid transparent;
-                    border-radius: 15px;
+                padding: 0;
+                margin: 0;
+                background-color: $c-main;
+                border: 1px solid transparent;
+                border-radius: 15px;
+                &:hover {
+                    box-shadow: 0 0 12px 6px rgba(#000,.2);
+                    transform: scale(1.01);
                 }
                 .faskes-logo {
                     width: 60px;
-                    background-color: $c-mandatory40;
+                    height: 60px;
+                    background-color: $c-mandatory20;
                     padding: 10px;
                     @include centering();
                     border-radius: 50%;
+                    animation: 1s linear width;
+
                 }
                 img { 
-                    width: 40px;
+                    width: 35px;
                     
                 }
                 p {
-                    font-weight: 600;
+                    font-weight: 500;
                     font-size: 14px;
                     letter-spacing: 0.015rem;
+
                 }
             }
         }
@@ -126,7 +141,7 @@
         justify-content: left;
         .faskes-card {
             background-color: $c-mandatory20;
-            padding: 1rem 1.5rem calc(.5rem + 85px) 1.5rem;
+            padding: 1.2rem 1.5rem calc(.5rem + 110px) 1.5rem;
             border-radius: 1.5rem;
             display: flex;
             flex-direction: column;
@@ -135,7 +150,7 @@
             .info {
                 display: flex;
                 flex-direction: column;
-                gap: 10px;
+                gap: 15px;
                 .card-category {
                     display: flex;
                     align-items: center;
@@ -150,28 +165,38 @@
                     }
                     p {
                         font-size: 12px;
+                        font-weight: 500;
                     }
                 }
-                .faskes-name {
-                    font-size: 18px;
-                    font-weight: 600;
-                    line-height: 24px;
-                }
-                .faskes-status {
+                .faskes-info {
                     display: flex;
                     flex-direction: column;
                     gap: 5px;
-                    color: rgba(#000,.5);
-                    .faskes-location{
-                        display: flex;
-                        gap: 5px;
-                        align-items: center;
+                    .faskes-name {
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 18px;
+                        text-transform: capitalize;
                     }
-                    .vaksin-status {
+                    .faskes-status {
                         display: flex;
+                        flex-direction: column;
                         gap: 5px;
-                        align-items: center;
-                        color: $c-accent;
+                        color: rgba(#000,.5);
+                        .faskes-location{
+                            display: flex;
+                            font-size: 14px;
+                            gap: 8px;
+                            align-items: center;
+                        }
+                        .vaksin-status {
+                            font-size: 14px;
+                            text-transform: uppercase;
+                            display: flex;
+                            gap: 8px;
+                            align-items: center;
+                            color: $c-accent;
+                        }
                     }
                 }
             }
@@ -181,7 +206,7 @@
                 gap: 5px;
                 margin-top: 10px;
                 position: absolute;
-                bottom: 5px;
+                bottom: 15px;
                 width: calc(100% - 3rem);
                 &::before {
                     position: absolute;
@@ -195,21 +220,27 @@
                 .btn  {
                     padding: 3px 0;
                     line-height: 24px;
-                    border-radius: 12px;
+                    border-radius: 10px;
                     font-size: 14px;
-                    font-weight: 600;
+                    font-weight: 500;
                     background-color: $c-accent;
+                    letter-spacing: .5px;
                 }
                 a {
                     padding: 3px 0;
                     line-height: 24px;
-                    border-radius: 12px;
+                    border-radius: 10px;
                     font-size: 14px;
                     font-weight: 600;
                     background-color: none;
                     text-align: center;
-                    color: $c-mandatory;
+                    color: $c-accent;
                     text-decoration: none;
+                    border: 1px solid transparent ;
+                    &:hover {
+                        border: 1px solid $c-mandatory;
+                        background-color: $c-mandatory20;
+                    }
                 }
             }
         }

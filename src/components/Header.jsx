@@ -4,6 +4,9 @@ import '../styles/css/header.css'
 import ModalContext from './Context/ModalContext'
 import ScrollContext from './Context/ScrollContext'
 import { HashLink as Link } from 'react-router-hash-link';
+import {HiArrowNarrowRight} from 'react-icons/hi'
+import { IconContext } from 'react-icons'
+
 
 
 function Header() {
@@ -63,13 +66,18 @@ function Header() {
           <li className={scrollPosition >= positionState.urgency && scrollPosition < positionState.vaccines? "active":""}>
             <Link className='nav' to={"/#urgency"} >Urgency</Link>
           </li>
-          <li className={scrollPosition >= positionState.vaccines && scrollPosition < positionState.footer? "active":""}>
+          <li className={scrollPosition >= positionState.vaccines ? "active":""}>
             <Link className='nav' to={"/#vaccines"} >Vaccines</Link>
           </li>
           <li className={findMatch ? "active":""}>
             <Link to={"/find#"} className='nav'>Vaccine Location</Link>
           </li>
-          <li><button className='btn primary register' onClick={(e)=> activateModal(e)}>Register</button></li>
+          <li><button className='btn primary register' onClick={(e)=> activateModal(e)}>
+            Register
+            <IconContext.Provider value={{ className:"arrow-btn"}}>
+                <HiArrowNarrowRight/>
+            </IconContext.Provider>
+          </button></li>
         </ul>
       </nav>
     </header>

@@ -56,21 +56,25 @@
   align-items: center;
   font-size: 18px;
   font-weight: 500;
-  padding: 15px 30px;
+  padding: 1rem 2.5rem;
 }
-.banner .text .cta .register:hover .arrow-btn {
-  transform: translateX(10px);
+.banner .text .cta .register:hover {
+  box-shadow: 0 0 0.5rem 0.25rem rgba(0, 162, 165, 0.2);
 }
 .banner .text .cta .next {
-  padding: 15px 30px;
+  padding: 1rem 2rem;
   font-size: 18px;
   font-weight: 500;
   color: #00A2A5;
   border: 3px solid #00A2A5;
 }
+.banner .text .cta .next:hover {
+  box-shadow: 0 0 0.5rem 0.25rem rgba(0, 162, 165, 0.1);
+}
 .banner .image {
   width: auto;
 }
 .banner .image img {
+  width: 100%;
   border-radius: 100px;
 }/*# sourceMappingURL=banner.css.map */

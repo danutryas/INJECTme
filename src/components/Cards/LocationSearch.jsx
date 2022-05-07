@@ -1,4 +1,7 @@
-import React,{useEffect} from 'react'
+import React,{useEffect, useState} from 'react'
+import { IconContext } from 'react-icons';
+import {RiArrowDownSLine,RiArrowUpSLine} from 'react-icons/ri'
+
 
 function LocationSearch({
     setIdProvinceInput,
@@ -7,9 +10,8 @@ function LocationSearch({
     setStates,
     provinces,
     setProvinces,
-    getFaskes,
+    findClick,
   }) {
-  
  
   useEffect(() => {
     const getProvince = async () => {
@@ -34,23 +36,24 @@ function LocationSearch({
       setIdStateInput(parseInt(e.target.value))
   }
   
+
   return (
     <div className='card search by-location'>
-        <h4>Find Faskes by Location</h4>
+        <h4>Find Faskes</h4>
         <form>
-            <select name="province" onChange={(e)=>provinceSelected(e)}>
+            <select name="province" onChange={(e)=>provinceSelected(e)} style={{backgroundImage:`url(${process.env.PUBLIC_URL + '/dropdown.svg'})`}}>
               <option value="null">Provinsi</option>
                 {provinces.map((prov) => (
                   <option key={prov.id} value={prov.id}>{prov.nama}</option>
                 ))}
             </select>
-            <select name="state" onChange={(e) => stateSelected(e)}>
+            <select name="state" onChange={(e) => stateSelected(e)} style={{backgroundImage:`url(${process.env.PUBLIC_URL + '/dropdown.svg'})`}}>
                 <option value="null" >State</option>
                 {states.map((state) => (
-                  <option key={state.id}value={state.id}>{state.nama}</option>
+                    <option key={state.id}value={state.id}>{state.nama}</option>
                 ))}
             </select>
-            <button className='btn primary' onClick={(e)=>getFaskes(e)}>Find</button>
+            <button className='btn primary' onClick={(e)=>{findClick(e) }}>Find</button>
         </form>
     </div>
   )

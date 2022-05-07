@@ -4,7 +4,6 @@ import FaskesCard from './Cards/FaskesCard'
 function FaskesList({filteredData}) {    
       
 
-
   return (
     <div className='faskes-list' id='faskes-list'>
       {filteredData.map((data) => {

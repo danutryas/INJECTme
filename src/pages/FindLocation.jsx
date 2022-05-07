@@ -19,6 +19,11 @@ function FindLocation() {
   const [idProvinceInput,setIdProvinceInput] = useState(0)
   const [idStateInput,setIdStateInput] = useState(0)
 
+  const findClick = (e)=> {
+    getFaskes(e)
+    const li = document.getElementById("faskes-list").offsetTop
+    window.scrollTo(0,li - 160)
+  }
 
   const getFaskes = (e) => {
     e.preventDefault()
@@ -74,7 +79,7 @@ function FindLocation() {
             setStates={setStates}
             provinces={provinces}
             setProvinces={setProvinces}
-            getFaskes={getFaskes}
+            findClick={findClick}
           />
         </div>
         <section className='categories'>

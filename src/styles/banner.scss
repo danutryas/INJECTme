@@ -57,25 +57,27 @@
                 align-items: center;
                 font-size: 18px;
                 font-weight: 500;
-                padding: 15px 30px;
+                padding: 1rem 2.5rem;
                 &:hover {
-                    .arrow-btn {
-                        transform: translateX(10px);
-                    }
+                    box-shadow: 0 0 .5rem .25rem $c-mandatory20;
                 }
             }
             .next {
-                padding: 15px 30px;
+                padding: 1rem 2rem; 
                 font-size: 18px;
                 font-weight: 500;
                 color: $c-mandatory;
-                border:3px solid $c-mandatory ;
+                border:3px solid $c-mandatory;
+                &:hover {
+                    box-shadow: 0 0 .5rem .25rem rgba($c-mandatory20,.1);
+                }
             }
         }
     }
     .image {
         width: auto;
         img {
+            width: 100%;
             border-radius: 100px;
         }
     }

@@ -66,25 +66,34 @@ header {
                     width: 100%;
                     border: 1px solid transparent;
                     background-color: transparent; 
-                    &:focus {
-                        background-image:linear-gradient(45deg,rgba($c-accent, 0.1),rgba(0,0,0,.00),rgba(0,0,0,.00),rgba($c-accent, 0.1));
-                    }
                 }
                 &:hover,&:focus {
                     background-image:linear-gradient(45deg,rgba($c-accent, 0.1),rgba(0,0,0,.00),rgba(0,0,0,.00),rgba($c-accent, 0.1));
                 }
+                &:active {
+                    background-image:linear-gradient(45deg,rgba($c-accent, 0.2),rgba(0,0,0,.00),rgba(0,0,0,.00),rgba($c-accent, 0.2));
+                    border-radius: 10px;
+                }
+
                 button.register {
-                    padding: 12px 32px;
+                    display: flex;
+                    align-items: center;
+                    padding: 12px 24px 12px 32px;
                     border-radius: 12px;
                     font-weight: 600;
                     font-size: 16px;
                     line-height: 24px;
                     color: $c-main;
                     background-color: $c-mandatory;
+                    gap: 5px;
                     // box-shadow: 0px 0px 10px rgba(0, 92, 105, 0.5);
                     &:hover{
                         box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.3);
                         background-color: $c-mandatory80;
+                        .arrow-btn {
+                            transform: translateX(10px);
+                            animation: 1s infinite moving;
+                        }
                     }
                     &:active {
                         box-shadow:none;
@@ -107,4 +116,9 @@ header {
     75%     {width: 37.5px;transform: translateX(-25px);}
     90%     {width: 45px;transform: translateX(-25px);}
     to      {width: 50px; transform: translateX(-25px);}
+}
+@keyframes moving {
+    from { transform: translateX(1px);}
+    50% { transform: translateX(5px);}
+    to { transform: translateX(1px);}
 }

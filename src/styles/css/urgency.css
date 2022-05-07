@@ -57,22 +57,32 @@
   cursor: pointer;
 }
 .urgency .bottom-side .benefit-list .benefit .image {
-  height: 200px;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  background-position: center;
+  background-size: cover;
 }
 .urgency .bottom-side .benefit-list .benefit .image .content {
   height: 50px;
   width: 50px;
   color: #005C69;
 }
+.urgency .bottom-side .benefit-list .benefit .image img {
+  width: 240px;
+  height: 250px;
+}
 .urgency .bottom-side .benefit-list .benefit .desc {
   border-radius: 15px;
   height: 50px;
   padding: 15px;
-  background-color: rgba(0, 162, 165, 0.6);
+  background-image: linear-gradient(360deg, #00a2a5, rgba(0, 162, 165, 0.9), rgba(0, 162, 165, 0.8), rgba(0, 162, 165, 0));
   color: #E6F4F1;
+  z-index: 10;
+  transform: translateY(-50px);
 }
 .urgency .bottom-side .benefit-list .benefit .desc h4 {
   font-size: 16px;
@@ -83,9 +93,10 @@
   display: none;
 }
 .urgency .bottom-side .benefit-list .benefit:hover .image {
-  height: 125px;
+  opacity: 0.8;
 }
 .urgency .bottom-side .benefit-list .benefit:hover .desc {
+  transform: translateY(-125px);
   height: 125px;
   background-color: rgba(0, 162, 165, 0.7);
 }
@@ -93,12 +104,12 @@
   display: block;
 }
 .urgency .bottom-side .benefit-list .benefit.active .image {
-  opacity: 0.5;
-  height: 125px;
+  opacity: 0.7;
 }
 .urgency .bottom-side .benefit-list .benefit.active .desc {
   height: 125px;
   background-color: #00a2a5;
+  transform: translateY(-125px);
 }
 .urgency .bottom-side .benefit-list .benefit.active .desc p {
   display: block;

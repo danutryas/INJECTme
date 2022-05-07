@@ -55,6 +55,16 @@
   font-weight: 500;
   color: #005C69;
 }
+.find-container .search-section .search form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 1ex;
+  background-origin: content-box;
+  background-size: 3%;
+}
 .find-container section.categories {
   display: flex;
   flex-direction: column;
@@ -92,28 +102,32 @@
   height: 100px;
   gap: 0.5rem;
   cursor: pointer;
-}
-.find-container section.categories .category-list .category.card {
   padding: 0;
   margin: 0;
   background-color: #E6F4F1;
   border: 1px solid transparent;
   border-radius: 15px;
 }
+.find-container section.categories .category-list .category:hover {
+  box-shadow: 0 0 12px 6px rgba(0, 0, 0, 0.2);
+  transform: scale(1.01);
+}
 .find-container section.categories .category-list .category .faskes-logo {
   width: 60px;
-  background-color: rgba(0, 162, 165, 0.4);
+  height: 60px;
+  background-color: rgba(0, 162, 165, 0.2);
   padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  animation: 1s linear width;
 }
 .find-container section.categories .category-list .category img {
-  width: 40px;
+  width: 35px;
 }
 .find-container section.categories .category-list .category p {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.015rem;
 }
@@ -126,7 +140,7 @@
 }
 .find-container .faskes-list .faskes-card {
   background-color: rgba(0, 162, 165, 0.2);
-  padding: 1rem 1.5rem calc(0.5rem + 85px) 1.5rem;
+  padding: 1.2rem 1.5rem calc(0.5rem + 110px) 1.5rem;
   border-radius: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -136,7 +150,7 @@
 .find-container .faskes-list .faskes-card .info {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 .find-container .faskes-list .faskes-card .info .card-category {
   display: flex;
@@ -153,26 +167,36 @@
 }
 .find-container .faskes-list .faskes-card .info .card-category p {
   font-size: 12px;
+  font-weight: 500;
 }
-.find-container .faskes-list .faskes-card .info .faskes-name {
-  font-size: 18px;
+.find-container .faskes-list .faskes-card .info .faskes-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.find-container .faskes-list .faskes-card .info .faskes-info .faskes-name {
+  font-size: 16px;
   font-weight: 600;
-  line-height: 24px;
+  line-height: 18px;
+  text-transform: capitalize;
 }
-.find-container .faskes-list .faskes-card .info .faskes-status {
+.find-container .faskes-list .faskes-card .info .faskes-info .faskes-status {
   display: flex;
   flex-direction: column;
   gap: 5px;
   color: rgba(0, 0, 0, 0.5);
 }
-.find-container .faskes-list .faskes-card .info .faskes-status .faskes-location {
+.find-container .faskes-list .faskes-card .info .faskes-info .faskes-status .faskes-location {
   display: flex;
-  gap: 5px;
+  font-size: 14px;
+  gap: 8px;
   align-items: center;
 }
-.find-container .faskes-list .faskes-card .info .faskes-status .vaksin-status {
+.find-container .faskes-list .faskes-card .info .faskes-info .faskes-status .vaksin-status {
+  font-size: 14px;
+  text-transform: uppercase;
   display: flex;
-  gap: 5px;
+  gap: 8px;
   align-items: center;
   color: #005C69;
 }
@@ -182,7 +206,7 @@
   gap: 5px;
   margin-top: 10px;
   position: absolute;
-  bottom: 5px;
+  bottom: 15px;
   width: calc(100% - 3rem);
 }
 .find-container .faskes-list .faskes-card .cta::before {
@@ -197,19 +221,25 @@
 .find-container .faskes-list .faskes-card .cta .btn {
   padding: 3px 0;
   line-height: 24px;
-  border-radius: 12px;
+  border-radius: 10px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   background-color: #005C69;
+  letter-spacing: 0.5px;
 }
 .find-container .faskes-list .faskes-card .cta a {
   padding: 3px 0;
   line-height: 24px;
-  border-radius: 12px;
+  border-radius: 10px;
   font-size: 14px;
   font-weight: 600;
   background-color: none;
   text-align: center;
-  color: #00A2A5;
+  color: #005C69;
   text-decoration: none;
+  border: 1px solid transparent;
+}
+.find-container .faskes-list .faskes-card .cta a:hover {
+  border: 1px solid #00A2A5;
+  background-color: rgba(0, 162, 165, 0.2);
 }/*# sourceMappingURL=find-faskes.css.map */
