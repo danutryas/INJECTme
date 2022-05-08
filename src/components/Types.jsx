@@ -1,6 +1,7 @@
 import React from 'react'
 import VaccineDropdown from './Dropdown/VaccineDropdown'
 import '../styles/css/type.css'
+import {motion} from 'framer-motion'
 
 function Types() {
     const Type1 = [
@@ -17,12 +18,27 @@ function Types() {
     <div className='vaccines' id='vaccines'>
         <div className="top-side">
             <div className="text">
-                <h3>GET TO KNOW THE TYPES</h3>
-                <p>All of the covid-19 vaccines are trying to achieve the same thing – immunity to the virus, and some might also be able to stop transmission. They do so by stimulating an immune response to an antigen, a molecule found on the virus.</p>
+                <motion.h3
+                    initial={{opacity:0,x:-200}}
+                    animate={{opacity:1,x:0}}
+                    exit={{opacity:0,x:-200}}
+                    transition={{delay:.4}}
+                >GET TO KNOW THE TYPES</motion.h3>
+                <motion.p
+                    initial={{opacity:0,x:-200}}
+                    animate={{opacity:1,x:0}}
+                    exit={{opacity:0,x:-200}}
+                    transition={{delay:.45}}
+                >All of the covid-19 vaccines are trying to achieve the same thing – immunity to the virus, and some might also be able to stop transmission. They do so by stimulating an immune response to an antigen, a molecule found on the virus.</motion.p>
             </div>
-            <div className="image">
+            <motion.div className="image"
+                initial={{opacity:0,x:200}}
+                animate={{opacity:1,x:0}}
+                exit={{opacity:0,x:200}}
+                transition={{delay:.4}}
+            >
                 <img src={process.env.PUBLIC_URL + '/vaccines.png'} alt="vaccines" />
-            </div>
+            </motion.div>
         </div>
         <div className="vaccine-type">
             <div className="type1">

@@ -1,26 +1,50 @@
 import React,{useContext} from 'react'
-import {HiArrowNarrowRight} from 'react-icons/hi'
 import '../styles/css/banner.css'
 import ModalContext  from './Context/ModalContext'
-import { IconContext } from 'react-icons'
+import {motion} from 'framer-motion'
 
 function Banner() {
     const {activateModal} = useContext(ModalContext)
 
+
   return (
     <div className='banner' id='home' >
         <div className="text">
-            <h4><span>PROTECT</span></h4>
-            <h1>GET <span className='accent-color'>PROTECTION.</span> <br/> TO KEEP <br /><span className='accent-color'>MOVING FORWARD.</span></h1>
-            <p>Covid-19 Vaccines brings everyone closer.</p>
-            <div className="cta">
+            <motion.h4
+                initial={{opacity:0,x:-200}}
+                animate={{opacity:1,x:0}}
+                exit={{opacity:0,x:-200}}
+                transition={{delay:.1}}
+            ><span>PROTECT</span></motion.h4>
+            <motion.h1
+                initial={{opacity:0,x:-200}}
+                animate={{opacity:1,x:0}}
+                exit={{opacity:0,x:-200}}
+                transition={{delay:.15}}>
+            GET <span className='accent-color'>PROTECTION.</span> <br/> TO KEEP <br /><span className='accent-color'>MOVING FORWARD.</span></motion.h1>
+            <motion.p                 
+                initial={{opacity:0,x:-200}}
+                animate={{opacity:1,x:0}}
+                exit={{opacity:0,x:-200}}
+                transition={{delay:.2}}>
+                Covid-19 Vaccines brings everyone closer.
+            </motion.p>
+            <motion.div className="cta" 
+                initial={{opacity:0,x:-200}}
+                animate={{opacity:1,x:0}}
+                exit={{opacity:0,x:-200}}
+                transition={{delay:.25}}>
                 <button className='btn primary register' onClick={(e)=> activateModal(e)}>Register</button>
                 <a href="#urgency"><button className='btn secondary next' >Find More</button></a>
-            </div>
+            </motion.div>
         </div>
-        <div className="image">
+        <motion.div className="image"  
+                initial={{opacity:0,x:200}}
+                animate={{opacity:1,x:0}}
+                exit={{opacity:0,x:200}}
+                transition={{delay:.1}}>
             <img src={process.env.PUBLIC_URL + '/vaccination.png'} alt="vaccination" />
-        </div>   
+        </motion.div>   
     </div>
   )
 }

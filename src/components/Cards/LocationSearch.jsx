@@ -1,7 +1,5 @@
-import React,{useEffect, useState} from 'react'
-import { IconContext } from 'react-icons';
-import {RiArrowDownSLine,RiArrowUpSLine} from 'react-icons/ri'
-
+import React,{useEffect} from 'react'
+import {motion} from 'framer-motion'
 
 function LocationSearch({
     setIdProvinceInput,
@@ -38,24 +36,42 @@ function LocationSearch({
   
 
   return (
-    <div className='card search by-location'>
+    <motion.div className='card search by-location'
+      initial={{opacity:0,y:80}}
+      animate={{opacity:1,y:0}}
+      exit={{opacity:0,y:80}}
+      transition={{delay:.1}}>
         <h4>Find Faskes</h4>
         <form>
-            <select name="province" onChange={(e)=>provinceSelected(e)} style={{backgroundImage:`url(${process.env.PUBLIC_URL + '/dropdown.svg'})`}}>
+            <motion.select name="province" onChange={(e)=>provinceSelected(e)} style={{backgroundImage:`url(${process.env.PUBLIC_URL + '/dropdown.svg'})`}}
+              initial={{opacity:0,y:80}}
+              animate={{opacity:1,y:0}}
+              exit={{opacity:0,y:80}}
+              transition={{delay:.2}}>
               <option value="null">Provinsi</option>
                 {provinces.map((prov) => (
                   <option key={prov.id} value={prov.id}>{prov.nama}</option>
                 ))}
-            </select>
-            <select name="state" onChange={(e) => stateSelected(e)} style={{backgroundImage:`url(${process.env.PUBLIC_URL + '/dropdown.svg'})`}}>
+            </motion.select>
+            <motion.select name="state" onChange={(e) => stateSelected(e)} style={{backgroundImage:`url(${process.env.PUBLIC_URL + '/dropdown.svg'})`}}
+              initial={{opacity:0,y:80}}
+              animate={{opacity:1,y:0}}
+              exit={{opacity:0,y:80}}
+              transition={{delay:.3}}
+            >
                 <option value="null" >State</option>
                 {states.map((state) => (
                     <option key={state.id}value={state.id}>{state.nama}</option>
                 ))}
-            </select>
-            <button className='btn primary' onClick={(e)=>{findClick(e) }}>Find</button>
+            </motion.select>
+            <motion.button className='btn primary' onClick={(e)=>{findClick(e) }}
+              initial={{opacity:0,y:80}}
+              animate={{opacity:1,y:0}}
+              exit={{opacity:0,y:80}}
+              transition={{delay:.4}}
+            >Find</motion.button>
         </form>
-    </div>
+    </motion.div>
   )
 }
 

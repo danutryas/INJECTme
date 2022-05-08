@@ -2,7 +2,7 @@ import React from 'react'
 import BenefitCard from './Cards/BenefitCard'
 import '../styles/css/urgency.css'
 import {FaBiohazard} from 'react-icons/fa'
-
+import {motion} from 'framer-motion'
 
 function Urgency() {
     const benefits = [
@@ -15,15 +15,35 @@ function Urgency() {
   return (
     <div className='urgency' id='urgency'>
         <div className="top-side">
-            <div className="image">
+            <motion.div className="image"
+                initial={{opacity:0,x:-200}}
+                animate={{opacity:1,x:0}}
+                exit={{opacity:0,x:-200}}
+                transition={{delay:.3}}            
+            >
                 <img src={process.env.PUBLIC_URL + '/vaccine.png'} alt="vaccine" />
-            </div>
-            <div className="text">
-                <h3>WHY YOU NEED TO VACCINE ?</h3>
-                <p>Getting a vaccination is a safer way to build protection from COVID-19. COVID-19 vaccination helps protect you by creating an antibody response without you having to experience sickness.</p>
-            </div>
+            </motion.div>
+            <motion.div className="text">
+                <motion.h3
+                    initial={{opacity:0,x:200}}
+                    animate={{opacity:1,x:0}}
+                    exit={{opacity:0,x:200}}
+                    transition={{delay:.3}}
+                >WHY YOU NEED TO VACCINE ?</motion.h3>
+                <motion.p 
+                    initial={{opacity:0,x:200}}
+                    animate={{opacity:1,x:0}}
+                    exit={{opacity:0,x:200}}
+                    transition={{delay:.35}}
+                >Getting a vaccination is a safer way to build protection from COVID-19. COVID-19 vaccination helps protect you by creating an antibody response without you having to experience sickness.</motion.p>
+            </motion.div>
         </div>
-        <div className="bottom-side">
+        <motion.div className="bottom-side"
+            initial={{opacity:0,y:200}}
+            animate={{opacity:1,y:0}}
+            exit={{opacity:0,y:200}}
+            transition={{delay:.35}}
+        >
             <h4>BENEFITS OF COVID VACCINATION</h4>
             <div className="benefit-list">
                 {benefits.map((benefit) => {
@@ -32,7 +52,7 @@ function Urgency() {
                     )
                 })}
             </div>
-        </div>
+        </motion.div>
     </div>
   )
 }

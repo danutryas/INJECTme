@@ -7,16 +7,16 @@ import Types from '../components/Types'
 import Urgency from '../components/Urgency'
 import ModalContext from '../components/Context/ModalContext'
 import { ScrollProvider } from "../components/Context/ScrollContext";
-
+import { motion } from 'framer-motion'
 
 function Landing() {
   const { modalStatus } = useContext(ModalContext)
   
   return (
-    <>
+    <motion.div initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} transition={1}>
       <ScrollProvider>
         <Header />
-        <div className={`container ${modalStatus ? "active":""}`}>
+        <div className={`container ${modalStatus ? "active":""}`} >
           <Banner />
           <CovidStats />
           <Urgency />
@@ -24,7 +24,7 @@ function Landing() {
         </div>
         <Footer />
       </ScrollProvider>
-    </>
+    </motion.div>
   )
 }
 

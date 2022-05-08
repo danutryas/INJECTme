@@ -4,11 +4,18 @@ import {AiOutlineInstagram,AiFillLinkedin,AiFillGithub,AiOutlineCopyrightCircle}
 import '../styles/css/footer.css'
 import { IconContext } from 'react-icons'
 import { HashLink as Link } from 'react-router-hash-link';
+import {motion} from 'framer-motion'
+
 
 
 function Footer() {
   return (
-    <footer id='footer'>
+    <motion.footer id='footer'
+      initial={{opacity:0,y:200}}
+      animate={{opacity:1,x:0}}
+      exit={{opacity:0,y:200}}
+      transition={{delay:.1}}
+    >
       <nav>
         <div className="contact">
           <h4 className='title'>Contact Us</h4>
@@ -64,7 +71,7 @@ function Footer() {
         <p>COVID-19 HOTLINE <a href="tel:+62 119">119</a></p>
       </div>
       <Modal />
-    </footer>
+    </motion.footer>
   )
 }
 

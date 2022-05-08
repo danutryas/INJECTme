@@ -1,12 +1,13 @@
 import React,{useContext,useState,useEffect} from 'react'
 import Category from '../components/Cards/Category'
 import LocationSearch from '../components/Cards/LocationSearch'
-import NameSearch from '../components/Cards/NameSearch'
+// import NameSearch from '../components/Cards/NameSearch'
 import FaskesList from '../components/FaskesList'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import ModalContext from '../components/Context/ModalContext'
 import '../styles/css/find-faskes.css'
+import {motion} from 'framer-motion'
 
 
 function FindLocation() {  
@@ -62,7 +63,12 @@ function FindLocation() {
     <>
       <Header />
       <div className={`find-container ${modalStatus ? "active":""}`} id={"home"}>
-        <h1>FIND FASKES NEARBY</h1>
+        <motion.h1
+          initial={{opacity:0,y:-200}}
+          animate={{opacity:1,y:0}}
+          exit={{opacity:0,y:-200}}
+          transition={{delay:.1}}
+        >FIND FASKES NEARBY</motion.h1>
         <div className="search-section ">
           {/* <NameSearch 
             idProvinceInput={idProvinceInput}
@@ -82,14 +88,19 @@ function FindLocation() {
             findClick={findClick}
           />
         </div>
-        <section className='categories'>
+        <motion.section className='categories'
+          initial={{opacity:0,x:-200}}
+          animate={{opacity:1,x:0}}
+          exit={{opacity:0,x:-200}}
+          transition={{delay:.1}}  
+        >
             <h3>FASKES Category</h3>
             <div className="category-list">
               {faskes.map((faskes,index) => {
                 return <Category key={index} name={faskes.name} src={process.env.PUBLIC_URL + faskes.src} filterCategory={filterCategory} setFilterCategory={setFilterCategory} />
                 })}
             </div>
-        </section>
+        </motion.section>
         <FaskesList 
           filteredData={filteredData}
         />

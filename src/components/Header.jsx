@@ -1,12 +1,12 @@
 import React,{ useContext, useEffect, useState } from 'react'
-import { useLocation, useMatch } from 'react-router-dom'
+import {  useMatch } from 'react-router-dom'
 import '../styles/css/header.css'
 import ModalContext from './Context/ModalContext'
 import ScrollContext from './Context/ScrollContext'
 import { HashLink as Link } from 'react-router-hash-link';
 import {HiArrowNarrowRight} from 'react-icons/hi'
 import { IconContext } from 'react-icons'
-
+import {motion} from 'framer-motion'
 
 
 function Header() {
@@ -44,7 +44,7 @@ function Header() {
         footer:footerPosition - 1
       })
     }catch(err) {
-      console.log("")
+      console.log(err)
     }
   },[])
 
@@ -53,7 +53,12 @@ function Header() {
   })
 
   return (
-    <header className={headerPosition > 0 ? "active":""}>
+    <motion.header className={headerPosition > 0 ? "active":""}
+      initial={{opacity:0,y:-80}}
+      animate={{opacity:1,y:0}}
+      exit={{opacity:0,y:-80}}
+      transition={{delay:.005}}
+    >
       <div className="logo" >
           <img src={process.env.PUBLIC_URL + '/syringe50.jpg'} alt="Logo" />
           <a>INJECTme</a>
@@ -80,7 +85,7 @@ function Header() {
           </button></li>
         </ul>
       </nav>
-    </header>
+    </motion.header>
   )
 }
 

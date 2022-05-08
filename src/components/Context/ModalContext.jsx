@@ -1,5 +1,4 @@
 import { createContext,useState } from "react";
-import {AiOutlineLoading3Quarters} from 'react-icons/ai'
 const ModalContext = createContext({});
 
 export function ModalProvider({children}){

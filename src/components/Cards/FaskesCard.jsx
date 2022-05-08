@@ -2,14 +2,19 @@ import React,{useContext} from 'react'
 import ModalContext from '../Context/ModalContext'
 import { AiFillHome,AiFillCheckCircle } from 'react-icons/ai'
 import {MdLocationOn} from 'react-icons/md'
-import { HashLink as Link} from 'react-router-hash-link'
- 
+import {motion} from 'framer-motion'
+
 function FaskesCard({jenis,name,kota,provinsi,status,lat,long}) {
   const { activateModal } = useContext(ModalContext)
 
 
   return (
-    <div className='faskes-card'>
+    <motion.div className='faskes-card' 
+      initial={{opacity:0,y:50}}
+      animate={{opacity:1,y:0}}
+      exit={{opacity:0,y:50}}
+      transition={{delay:.1}}
+    >
       <div className="info">
         <div className="card-category">
           <AiFillHome className='card-icon'/>
@@ -31,11 +36,11 @@ function FaskesCard({jenis,name,kota,provinsi,status,lat,long}) {
       </div>
       <div className="cta">
         <button className='btn primary' onClick={(e)=> activateModal(e)}>Register</button>
-        <a href={`https://maps.google.com/?q=${lat},${long}`} target="_blank">
+        <a href={`https://maps.google.com/?q=${lat},${long}`} target="_blank" rel='noreferrer'>
           View Location
         </a>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
