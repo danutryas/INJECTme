@@ -1,5 +1,4 @@
 import React from 'react'
-import Modal from './Cards/Modal'
 import {AiOutlineInstagram,AiFillLinkedin,AiFillGithub,AiOutlineCopyrightCircle} from 'react-icons/ai'
 import '../styles/css/footer.css'
 import { IconContext } from 'react-icons'
@@ -70,7 +69,6 @@ function Footer() {
         </div>
         <p>COVID-19 HOTLINE <a href="tel:+62 119">119</a></p>
       </div>
-      <Modal />
     </motion.footer>
   )
 }

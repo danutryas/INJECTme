@@ -5,6 +5,7 @@ export function ModalProvider({children}){
     const [modalStatus,setModalStatus] = useState(false)
 
     const activateModal = (e) => {
+        e.preventDefault()
         document.body.classList.toggle('active-modal');
         setModalStatus(prev => !prev)
     }

@@ -2,8 +2,8 @@ import './styles/css/reset.css'
 import './styles/css/global.css'
 import { ModalProvider } from "./components/Context/ModalContext";
 import {BrowserRouter as Router} from "react-router-dom";
-// import { ScrollProvider } from "./components/Context/ScrollContext"
 import AnimatedRoutes from './components/AnimatedRoutes';
+import Modal from './components/Cards/Modal';
 
 function App() {
     
@@ -14,6 +14,7 @@ function App() {
             <AnimatedRoutes />
           </Router>
         </div>
+      <Modal />
     </ModalProvider>
   );
 }
