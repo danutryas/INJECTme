@@ -2,13 +2,33 @@ header {
   position: sticky;
   z-index: 1;
   top: 0;
-  padding: 0 200px;
+  padding: 0 15rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
   height: 80px;
   align-items: center;
   background-color: #E6F4F1;
+}
+@media (min-width: 825px) and (max-width: 1120px) {
+  header {
+    padding: 0 3.25rem;
+  }
+}
+@media (min-width: 1121px) and (max-width: 1440px) {
+  header {
+    padding: 0 5rem;
+  }
+}
+@media (max-width: 824px) {
+  header {
+    padding: 0 5rem;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    padding: 0 1.5rem;
+  }
 }
 header.active {
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.15);
@@ -98,7 +118,7 @@ header nav ul li button.register:active {
   box-shadow: none;
   background-color: rgba(0, 162, 165, 0.4);
 }
-@media (min-width: 825px) and (max-width: 1024px) {
+@media (min-width: 825px) and (max-width: 1120px) {
   header {
     padding: 0 3.25em;
     width: 100%;
@@ -113,16 +133,43 @@ header nav ul li button.register:active {
     padding: 8px 18px 8px 24px;
   }
 }
-@media (max-width: 320px) {
+@media (min-width: 1121px) and (max-width: 1440px) {
   header {
-    padding: 0 10px;
+    padding: 0 3.75em;
+  }
+}
+@media (max-width: 824px) {
+  header nav ul {
+    gap: 0;
+  }
+  header nav ul li.active::after {
+    display: none;
+  }
+  header nav ul li .nav {
+    display: none;
+    width: 0;
+    visibility: hidden;
+  }
+}
+@media (max-width: 768px) {
+  header {
     height: 60px;
   }
-  header ul li::after {
-    display: none;
+  header .logo {
+    gap: 10px;
   }
-  header ul li .nav {
-    display: none;
+  header .logo img {
+    height: 40px;
+  }
+  header .logo a {
+    font-size: 14px;
+  }
+  header nav ul li {
+    margin-top: 7px;
+  }
+  header nav ul li button.register {
+    padding: 10px 20px 10px 28px;
+    font-size: 14px;
   }
 }
 

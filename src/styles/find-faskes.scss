@@ -250,9 +250,7 @@
             }
         }
     }   
-    @include media('>desktop','<=desktop-lg') {
-        
-    }
+
     @include media('>tablet-lg','<=desktop') {
         margin-top: 140px;
     }

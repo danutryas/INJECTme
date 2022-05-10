@@ -105,19 +105,65 @@
         }
     }
 
-    @include media('>desktop','<=desktop-lg') {
-        
-    }
     @include media('>tablet','<=tablet-lg') {
-        
+        height: 550px;
+        .text {
+            gap: 10px;
+            h1 {
+                font-size: 34px;
+                line-height: 42px;
+            }
+            h4 {
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+        .image {
+            width: auto;
+            img {
+                width: 350px;
+                border-radius: 75px;
+            }
+        }
     }
-    @include media('>phone','<=tablet') {
-
-    }
-    @include media("<=phone"){
-        align-items: center;
-        flex-direction: column-reverse;
+    @include media('<=tablet') {
+        margin: 0 auto;
         height: auto;
+        max-width: 80%;
+        flex-direction: column-reverse;
+        margin-bottom: 100px;
+        gap: 25px;
+        .text {
+            width: 100%;
+            h1 {
+                font-size: 24px;
+                line-height: 38px;
+            }
+            h4 {
+                font-size: 12px;
+                &::after {
+                    bottom: -8px;
+                }
+            }
+            p {
+                font-size: 12px;
+            }
+            .cta {
+                margin-top: 20px;
+                .register,.next {
+                    padding: .75rem 1.5rem;
+                    font-size: 14px;
+                }
+            }
+        }
+        .image {
+            width: auto;
+            text-align: center;
+            img {
+                width: 100%;
+                border-radius: 25px;
+            }
+        }
     }
     
 }

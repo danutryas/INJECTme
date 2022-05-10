@@ -27,6 +27,8 @@
 }
 .covid-stats .status-list {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .covid-stats .status-list .status {
   width: 250px;
@@ -71,7 +73,7 @@
   font-weight: 500;
   line-height: 24px;
 }
-@media (min-width: 825px) and (max-width: 1024px) {
+@media (min-width: 825px) and (max-width: 1120px) {
   .covid-stats {
     gap: 30px;
   }
@@ -83,7 +85,78 @@
     width: 185px;
   }
 }
-@media (max-width: 320px) {
+@media (min-width: 1121px) and (max-width: 1440px) {
+  .covid-stats {
+    gap: 35px;
+  }
+  .covid-stats h4 {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .covid-stats .status-list .status {
+    width: 215px;
+  }
+}
+@media (max-width: 824px) {
+  .covid-stats {
+    gap: 30px;
+  }
+  .covid-stats h4 {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .covid-stats .status-list .status {
+    width: 40%;
+  }
+  .covid-stats .status-list .status:nth-child(2)::after {
+    display: none;
+  }
+  .covid-stats .status-list .status:nth-child(1), .covid-stats .status-list .status:nth-child(2) {
+    margin-bottom: 10px;
+  }
+  .covid-stats .status-list .status:nth-child(3), .covid-stats .status-list .status:nth-child(4) {
+    margin-top: 10px;
+  }
+  .covid-stats .status-list .status:nth-child(3)::before {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .covid-stats {
+    gap: 20px;
+  }
+  .covid-stats h4 {
+    font-size: 16px;
+    text-align: center;
+    line-height: 24px;
+  }
+  .covid-stats h4::after {
+    bottom: -10px;
+    width: 150px;
+  }
+  .covid-stats .status-list .status {
+    margin-bottom: 10px;
+    width: 60%;
+  }
+  .covid-stats .status-list .status:not(:last-child)::after {
+    height: 2px;
+    width: 50px;
+    right: 50%;
+    top: 100%;
+    transform: translateX(50%);
+  }
+  .covid-stats .status-list .status::before {
+    display: none;
+  }
+  .covid-stats .status-list .status .number {
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .covid-stats.card {
+    width: 90%;
+  }
+}
+@media (max-width: 310px) {
   .covid-stats {
     width: 100vw;
     height: auto;

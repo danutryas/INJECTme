@@ -3,15 +3,35 @@
 
 @mixin constructor() {
     margin: 0 15rem;
+    @include media('>desktop','<=desktop-lg') {
+        margin: 0 5rem;
+    }
     @include media('>tablet-lg','<=desktop') {
         margin: 0 2.5rem;
     }
+    @include media('<=tablet-lg') {
+        margin: 0 2rem;   
+    }
+    @include media('<=tablet') {
+        margin: 0 1rem;   
+    }    
 }
 @mixin constructor2() {
     padding: 0 15rem;
     @include media('>tablet-lg','<=desktop') {
         padding: 0 3.25rem;
     }
+    @include media('>desktop','<=desktop-lg') {
+        padding: 0 5rem;
+    }
+    @include media('<=tablet-lg') {
+        padding: 0 5rem;   
+    }
+    @include media('<=tablet') {
+        padding: 0 1.5rem;   
+        
+    }
+
 }
 @mixin sticky {
     position: sticky;

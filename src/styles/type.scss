@@ -149,18 +149,106 @@
             }
         }
     }
-    @include media('>desktop','<=desktop-lg') {
-        
-    }
-
 
     @include media('>tablet','<=tablet-lg') {
-        
-    }
-    @include media('>phone','<=tablet') {
+        .top-side {
+            .text {
+                width: 350px;
+                gap: 12px;
+                h3 {
+                    font-size: 24px;
+                    line-height: 28px;
+                }
+                p {
+                    width: 350px;
+                    font-size: 22px;
+                }
+            }
+            .image {
+                width: 350px;
+                img {
+                    width: 350px;
+                }
+            }
+        }
+        .vaccine-type {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            .type1,.type2 {
+                .dropdown {
+                    width: 650px;
+                    &.active {
+                        &:hover {
+                            .heading {
+                                width: 640px;
+                            }
+                        }
+                    }
+                    &:hover {
+                        .heading {
+                            width: 640px;
+                        }
+                    }
+                }
 
+            }
+        }
     }
-    @include media("<=phone"){
-    
+    @include media('<=tablet') {
+        .top-side {
+            margin: 0 auto;
+            height: auto;
+            max-width: 80%;
+            flex-direction: column-reverse;
+            margin-bottom: 100px;
+            gap: 25px;
+            .text {
+                width: 100%;
+                h3 {
+                    font-size: 22px;
+                    line-height: 32px;
+                }
+                p {
+                    width: 100%;
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+            }
+            .image {
+                width: auto;
+                text-align: center;
+                img {
+                    width: 100%;
+                    border-radius: 25px;
+            }
+            }
+        }
+        .vaccine-type {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+            .type1,.type2 {
+                width: 90%;
+                .dropdown {
+                    width: 100%;
+                    &.active {
+                        &:hover {
+                            .heading {
+                                width: calc(100% - 10px);
+                            }
+                        }
+                    }
+                    &:hover {
+                        .heading {
+                            width: calc(100% - 10px);
+                        }
+                    }
+                }
+
+            }
+            
+        }
     }
 }

@@ -14,9 +14,24 @@ footer nav {
   padding-top: 10px;
   color: #E6F4F1;
 }
-@media (min-width: 825px) and (max-width: 1024px) {
+@media (min-width: 825px) and (max-width: 1120px) {
   footer nav {
     padding: 0 3.25rem;
+  }
+}
+@media (min-width: 1121px) and (max-width: 1440px) {
+  footer nav {
+    padding: 0 5rem;
+  }
+}
+@media (max-width: 824px) {
+  footer nav {
+    padding: 0 5rem;
+  }
+}
+@media (max-width: 768px) {
+  footer nav {
+    padding: 0 1.5rem;
   }
 }
 footer nav .contact ul li a, footer nav .link ul li a {
@@ -64,9 +79,24 @@ footer .comp-info {
   align-items: center;
   font-weight: 500;
 }
-@media (min-width: 825px) and (max-width: 1024px) {
+@media (min-width: 825px) and (max-width: 1120px) {
   footer .comp-info {
     padding: 0 3.25rem;
+  }
+}
+@media (min-width: 1121px) and (max-width: 1440px) {
+  footer .comp-info {
+    padding: 0 5rem;
+  }
+}
+@media (max-width: 824px) {
+  footer .comp-info {
+    padding: 0 5rem;
+  }
+}
+@media (max-width: 768px) {
+  footer .comp-info {
+    padding: 0 1.5rem;
   }
 }
 footer .comp-info .copyright {
@@ -78,8 +108,49 @@ footer .comp-info a {
   color: #E6F4F1;
   text-decoration: underline;
 }
-@media (min-width: 825px) and (max-width: 1024px) {
+@media (min-width: 825px) and (max-width: 1120px) {
   footer nav {
     height: 275px;
+  }
+}
+@media (min-width: 769px) and (max-width: 824px) {
+  footer nav {
+    height: 300px;
+    padding: 0 2.5rem;
+  }
+  footer .comp-info {
+    padding: 0 2.5rem;
+  }
+}
+@media (max-width: 768px) {
+  footer nav {
+    flex-direction: column;
+    height: calc(100% + 20px);
+    width: 100%;
+    align-items: center;
+  }
+  footer nav div {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 8px;
+  }
+  footer nav div ul {
+    align-items: center;
+  }
+  footer nav div ul li {
+    gap: 6px;
+  }
+  footer nav div ul a {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  footer .comp-info {
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
   }
 }/*# sourceMappingURL=footer.css.map */

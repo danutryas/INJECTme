@@ -5,9 +5,24 @@
   padding-top: 120px;
   gap: 35px;
 }
-@media (min-width: 825px) and (max-width: 1024px) {
+@media (min-width: 1121px) and (max-width: 1440px) {
+  .vaccines {
+    margin: 0 5rem;
+  }
+}
+@media (min-width: 825px) and (max-width: 1120px) {
   .vaccines {
     margin: 0 2.5rem;
+  }
+}
+@media (max-width: 824px) {
+  .vaccines {
+    margin: 0 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .vaccines {
+    margin: 0 1rem;
   }
 }
 .vaccines .top-side {
@@ -103,7 +118,7 @@
 .vaccines .vaccine-type .type1 .dropdown p.desc, .vaccines .vaccine-type .type2 .dropdown p.desc {
   display: none;
 }
-@media (min-width: 825px) and (max-width: 1024px) {
+@media (min-width: 825px) and (max-width: 1120px) {
   .vaccines .top-side .text {
     width: 350px;
     gap: 12px;
@@ -135,5 +150,87 @@
   }
   .vaccines .vaccine-type .type1 .dropdown:hover .heading, .vaccines .vaccine-type .type2 .dropdown:hover .heading {
     width: 640px;
+  }
+}
+@media (min-width: 769px) and (max-width: 824px) {
+  .vaccines .top-side .text {
+    width: 350px;
+    gap: 12px;
+  }
+  .vaccines .top-side .text h3 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .vaccines .top-side .text p {
+    width: 350px;
+    font-size: 22px;
+  }
+  .vaccines .top-side .image {
+    width: 350px;
+  }
+  .vaccines .top-side .image img {
+    width: 350px;
+  }
+  .vaccines .vaccine-type {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .vaccines .vaccine-type .type1 .dropdown, .vaccines .vaccine-type .type2 .dropdown {
+    width: 650px;
+  }
+  .vaccines .vaccine-type .type1 .dropdown.active:hover .heading, .vaccines .vaccine-type .type2 .dropdown.active:hover .heading {
+    width: 640px;
+  }
+  .vaccines .vaccine-type .type1 .dropdown:hover .heading, .vaccines .vaccine-type .type2 .dropdown:hover .heading {
+    width: 640px;
+  }
+}
+@media (max-width: 768px) {
+  .vaccines .top-side {
+    margin: 0 auto;
+    height: auto;
+    max-width: 80%;
+    flex-direction: column-reverse;
+    margin-bottom: 100px;
+    gap: 25px;
+  }
+  .vaccines .top-side .text {
+    width: 100%;
+  }
+  .vaccines .top-side .text h3 {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  .vaccines .top-side .text p {
+    width: 100%;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .vaccines .top-side .image {
+    width: auto;
+    text-align: center;
+  }
+  .vaccines .top-side .image img {
+    width: 100%;
+    border-radius: 25px;
+  }
+  .vaccines .vaccine-type {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+  .vaccines .vaccine-type .type1, .vaccines .vaccine-type .type2 {
+    width: 90%;
+  }
+  .vaccines .vaccine-type .type1 .dropdown, .vaccines .vaccine-type .type2 .dropdown {
+    width: 100%;
+  }
+  .vaccines .vaccine-type .type1 .dropdown.active:hover .heading, .vaccines .vaccine-type .type2 .dropdown.active:hover .heading {
+    width: calc(100% - 10px);
+  }
+  .vaccines .vaccine-type .type1 .dropdown:hover .heading, .vaccines .vaccine-type .type2 .dropdown:hover .heading {
+    width: calc(100% - 10px);
   }
 }/*# sourceMappingURL=type.css.map */

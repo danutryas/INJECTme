@@ -128,9 +128,6 @@
             }
         }
     }
-    @include media('>desktop','<=desktop-lg') {
-        
-    }
     @include media('>tablet-lg','<=desktop') {
         gap: 30px;
         .top-side {
@@ -158,12 +155,65 @@
     }
 
     @include media('>tablet','<=tablet-lg') {
-        
+        gap: 30px;
+        .top-side {
+            justify-content: center;
+            .image {
+                img {
+                    width: 350px;
+                }
+            }
+            .text {
+                // margin-left: -50px;
+                width: 350px;
+                gap: 12px;
+                h3 {
+                    font-size: 24px;
+                    line-height: 28px;
+                }
+                p {
+                    width: 350px;
+                    font-size: 22px;
+                }
+            }
+        }
     }
-    @include media('>phone','<=tablet') {
-        
+    @include media('<=tablet') {
+        gap: 10px;
+        .top-side {
+            margin: 0 auto;
+            height: auto;
+            max-width: 80%;
+            flex-direction: column;
+            margin-bottom: 100px;
+            gap: 25px;
+            .text {
+                width: 100%;
+                h3 {
+                    font-size: 22px;
+                    line-height: 32px;
+                }
+                p {
+                    width: 100%;
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+            }
+            .image {
+                width: auto;
+                text-align: center;
+                img {
+                    width: 100%;
+                    border-radius: 25px;
+            }
+            }
+        }
+        .bottom-side {
+            & >h4 {
+                font-size: 20px;
+                text-align: center;
+            }
+        }
     }
-    @include media("<=phone"){
-    
-    }
+
 }

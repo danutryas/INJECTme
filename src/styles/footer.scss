@@ -52,10 +52,6 @@ footer {
                 }
             }
         }
-
-
-
-
         color: $c-main;
         & a {
             color: $c-main;
@@ -87,18 +83,47 @@ footer {
         }
     
     }
-    @include media('>desktop','<=desktop-lg') {
-        
-    }
     @include media('>tablet','<=tablet-lg') {
-        
+        nav {
+            height: 300px;
+            padding: 0 2.5rem;
+            
+        }
+        .comp-info {
+            padding: 0 2.5rem;
+
+        }
     }
-    @include media('>phone','<=tablet') {
-
-    }
-
-
-    @include media("<=phone"){
-    
+    @include media('<=tablet') {
+        nav {
+            flex-direction: column;
+            height: calc(100% + 20px);
+            width: 100%;
+            align-items: center;
+            div {
+                width: 100%;
+                height: auto;
+                text-align: center;
+                align-items: center;
+                margin-bottom: 25px;
+                gap: 8px;
+                ul {
+                    align-items: center;
+                    li {
+                        gap: 6px;
+                    }
+                    a {
+                        font-size: 16px;
+                        line-height: 22px;
+                    }
+                } 
+            }
+        }
+        .comp-info {
+            flex-direction: column-reverse;
+            justify-content: center;
+            gap: 10px;
+            font-size: 16px;
+        }
     }
 }

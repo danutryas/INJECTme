@@ -6,9 +6,24 @@
   flex-direction: column;
   gap: 100px;
 }
-@media (min-width: 825px) and (max-width: 1024px) {
+@media (min-width: 1121px) and (max-width: 1440px) {
+  .find-container {
+    margin: 0 5rem;
+  }
+}
+@media (min-width: 825px) and (max-width: 1120px) {
   .find-container {
     margin: 0 2.5rem;
+  }
+}
+@media (max-width: 824px) {
+  .find-container {
+    margin: 0 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .find-container {
+    margin: 0 1rem;
   }
 }
 .find-container h1 {
@@ -250,7 +265,7 @@
   border: 1px solid #00A2A5;
   background-color: rgba(0, 162, 165, 0.2);
 }
-@media (min-width: 825px) and (max-width: 1024px) {
+@media (min-width: 825px) and (max-width: 1120px) {
   .find-container {
     margin-top: 140px;
   }
