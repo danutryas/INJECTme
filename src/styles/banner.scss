@@ -1,5 +1,7 @@
 @import './prefix/colors';
 @import './prefix/mixins';
+@import './prefix/include_media';
+
 
 .banner {
     display: flex;
@@ -12,9 +14,16 @@
         flex-direction: column;
         gap: 10px;
         color: $c-mandatory;
+        h1 {
+            font-size: 42px;
+            line-height: 58px;
+            .accent-color {
+                color: $c-accent;
+            }
+        }
         h4 {
-            font-weight: 800;
             font-size: 16px;
+            font-weight: 800;
             position: relative;
             margin-bottom: 10px;
             h4 span{
@@ -26,18 +35,12 @@
                 height: 3px;
                 background-color: $c-accent;
                 width: 50px;
-                bottom: -5px;
+                bottom: -10px;
                 left: 0;
                 
             }
         }
-        h1 {
-            font-size: 42px;
-            line-height: 58px;
-            .accent-color {
-                color: $c-accent;
-            }
-        }
+
         p {
             font-weight: 500;
             font-size: 16px;
@@ -77,8 +80,44 @@
     .image {
         width: auto;
         img {
-            width: 100%;
+            // width: 100%;
             border-radius: 100px;
         }
     }
+    @include media('>tablet-lg','<=desktop') {
+        .text {
+            gap: 25px;
+            h1 {
+                font-size: 38px;
+                line-height: 48px;
+            }
+            h4 {
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+        .image {
+            width: auto;
+            img {
+                width: 350px;
+                border-radius: 75px;
+            }
+        }
+    }
+
+    @include media('>desktop','<=desktop-lg') {
+        
+    }
+    @include media('>tablet','<=tablet-lg') {
+        
+    }
+    @include media('>phone','<=tablet') {
+
+    }
+    @include media("<=phone"){
+        align-items: center;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    
 }

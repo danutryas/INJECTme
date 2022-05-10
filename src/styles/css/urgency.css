@@ -6,6 +6,11 @@
   position: relative;
   padding-top: 120px;
 }
+@media (min-width: 825px) and (max-width: 1024px) {
+  .urgency {
+    margin: 0 2.5rem;
+  }
+}
 .urgency .top-side {
   display: flex;
   align-items: center;
@@ -48,6 +53,8 @@
 .urgency .bottom-side .benefit-list {
   display: flex;
   gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .urgency .bottom-side .benefit-list .benefit {
   width: 240px;
@@ -113,4 +120,27 @@
 }
 .urgency .bottom-side .benefit-list .benefit.active .desc p {
   display: block;
+}
+@media (min-width: 825px) and (max-width: 1024px) {
+  .urgency {
+    gap: 30px;
+  }
+  .urgency .top-side {
+    justify-content: center;
+  }
+  .urgency .top-side .image img {
+    width: 350px;
+  }
+  .urgency .top-side .text {
+    width: 350px;
+    gap: 12px;
+  }
+  .urgency .top-side .text h3 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .urgency .top-side .text p {
+    width: 350px;
+    font-size: 22px;
+  }
 }/*# sourceMappingURL=urgency.css.map */

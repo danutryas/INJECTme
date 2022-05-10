@@ -1,5 +1,7 @@
 @import './prefix/colors';
 @import './prefix/mixins';
+@import './prefix/include_media';
+
 
 .find-container {
     @include constructor();
@@ -20,10 +22,11 @@
         flex-direction: column;
         width: 100%;
         gap: 40px;
+        align-items: center;
         & .card {
             border: none;
             height: 140px;
-            width: 1040px;
+            width: 80vw;
             background-color: $c-main;
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
         }
@@ -132,13 +135,15 @@
                 }
             }
         }
+        // @include media()
     }
     .faskes-list {
         display: grid;
-        grid-template-columns: 22rem 22rem 22rem;
+        grid-template-columns: repeat(auto-fill,22rem);
         grid-auto-rows: auto;
-        gap:40px;
-        justify-content: left;
+        max-width: calc(22rem*3 + 50px);
+        gap:20px;
+        justify-content: center;
         .faskes-card {
             background-color: $c-mandatory20;
             padding: 1.2rem 1.5rem calc(.5rem + 110px) 1.5rem;
@@ -245,4 +250,21 @@
             }
         }
     }   
+    @include media('>desktop','<=desktop-lg') {
+        
+    }
+    @include media('>tablet-lg','<=desktop') {
+        margin-top: 140px;
+    }
+    @include media('>tablet','<=tablet-lg') {
+        
+    }
+    @include media('>phone','<=tablet') {
+
+    }
+
+
+    @include media("<=phone"){
+    
+    }
 }

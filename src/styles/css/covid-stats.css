@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 40px;
   flex-basis: auto;
   width: auto;
@@ -69,6 +70,24 @@
   color: #00A2A5;
   font-weight: 500;
   line-height: 24px;
+}
+@media (min-width: 825px) and (max-width: 1024px) {
+  .covid-stats {
+    gap: 30px;
+  }
+  .covid-stats h4 {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .covid-stats .status-list .status {
+    width: 185px;
+  }
+}
+@media (max-width: 320px) {
+  .covid-stats {
+    width: 100vw;
+    height: auto;
+  }
 }
 
 .card {

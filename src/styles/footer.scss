@@ -1,5 +1,7 @@
 @import './prefix/colors';
 @import './prefix/mixins';
+@import './prefix/include_media';
+
 
 footer {
     width: 100%;
@@ -77,5 +79,26 @@ footer {
            color: $c-main;
            text-decoration: underline; 
         }
+    }
+    @include media('>tablet-lg','<=desktop') {
+        nav {
+            height: 275px;
+
+        }
+    
+    }
+    @include media('>desktop','<=desktop-lg') {
+        
+    }
+    @include media('>tablet','<=tablet-lg') {
+        
+    }
+    @include media('>phone','<=tablet') {
+
+    }
+
+
+    @include media("<=phone"){
+    
     }
 }

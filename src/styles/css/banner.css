@@ -5,15 +5,27 @@
   align-items: center;
   height: 700px;
 }
+@media (min-width: 825px) and (max-width: 1024px) {
+  .banner {
+    margin: 0 2.5rem;
+  }
+}
 .banner .text {
   display: flex;
   flex-direction: column;
   gap: 10px;
   color: #00A2A5;
 }
+.banner .text h1 {
+  font-size: 42px;
+  line-height: 58px;
+}
+.banner .text h1 .accent-color {
+  color: #005C69;
+}
 .banner .text h4 {
-  font-weight: 800;
   font-size: 16px;
+  font-weight: 800;
   position: relative;
   margin-bottom: 10px;
 }
@@ -26,15 +38,8 @@
   height: 3px;
   background-color: #005C69;
   width: 50px;
-  bottom: -5px;
+  bottom: -10px;
   left: 0;
-}
-.banner .text h1 {
-  font-size: 42px;
-  line-height: 58px;
-}
-.banner .text h1 .accent-color {
-  color: #005C69;
 }
 .banner .text p {
   font-weight: 500;
@@ -75,6 +80,32 @@
   width: auto;
 }
 .banner .image img {
-  width: 100%;
   border-radius: 100px;
+}
+@media (min-width: 825px) and (max-width: 1024px) {
+  .banner .text {
+    gap: 25px;
+  }
+  .banner .text h1 {
+    font-size: 38px;
+    line-height: 48px;
+  }
+  .banner .text h4 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .banner .image {
+    width: auto;
+  }
+  .banner .image img {
+    width: 350px;
+    border-radius: 75px;
+  }
+}
+@media (max-width: 320px) {
+  .banner {
+    align-items: center;
+    flex-direction: column-reverse;
+    height: auto;
+  }
 }/*# sourceMappingURL=banner.css.map */

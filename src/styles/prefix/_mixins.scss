@@ -1,8 +1,17 @@
+@import './include_media';
+
+
 @mixin constructor() {
     margin: 0 15rem;
+    @include media('>tablet-lg','<=desktop') {
+        margin: 0 2.5rem;
+    }
 }
 @mixin constructor2() {
     padding: 0 15rem;
+    @include media('>tablet-lg','<=desktop') {
+        padding: 0 3.25rem;
+    }
 }
 @mixin sticky {
     position: sticky;

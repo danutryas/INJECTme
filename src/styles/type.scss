@@ -1,5 +1,7 @@
 @import './prefix/colors';
 @import './prefix/mixins';
+@import './prefix/include_media';
+
 
 .vaccines {
     @include constructor();
@@ -46,13 +48,12 @@
                 color: $c-main;
                 display: flex;
                 flex-direction: column;
-                height: 50px;
+                max-height: 50px;
                 width: 500px;
                 border-radius: 15px;
-                animation: 2s ease-in-out height;
                 &.active {
                     height: auto;
-                    
+                    max-height: fit-content;
                     &:hover {
                         cursor: pointer;
                         .heading {
@@ -97,9 +98,69 @@
                 }
                 p.desc {
                     display: none;
+
                 }
                 
             }
         }
+    }
+    @include media('>tablet-lg','<=desktop') {
+        .top-side {
+            .text {
+                width: 350px;
+                gap: 12px;
+                h3 {
+                    font-size: 24px;
+                    line-height: 28px;
+                }
+                p {
+                    width: 350px;
+                    font-size: 22px;
+                }
+            }
+            .image {
+                width: 350px;
+                img {
+                    width: 350px;
+                }
+            }
+        }
+        .vaccine-type {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            .type1,.type2 {
+                .dropdown {
+                    width: 650px;
+                    &.active {
+                        &:hover {
+                            .heading {
+                                width: 640px;
+                            }
+                        }
+                    }
+                    &:hover {
+                        .heading {
+                            width: 640px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+    @include media('>desktop','<=desktop-lg') {
+        
+    }
+
+
+    @include media('>tablet','<=tablet-lg') {
+        
+    }
+    @include media('>phone','<=tablet') {
+
+    }
+    @include media("<=phone"){
+    
     }
 }

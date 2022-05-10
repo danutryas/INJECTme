@@ -14,6 +14,11 @@ footer nav {
   padding-top: 10px;
   color: #E6F4F1;
 }
+@media (min-width: 825px) and (max-width: 1024px) {
+  footer nav {
+    padding: 0 3.25rem;
+  }
+}
 footer nav .contact ul li a, footer nav .link ul li a {
   text-decoration: underline;
 }
@@ -59,6 +64,11 @@ footer .comp-info {
   align-items: center;
   font-weight: 500;
 }
+@media (min-width: 825px) and (max-width: 1024px) {
+  footer .comp-info {
+    padding: 0 3.25rem;
+  }
+}
 footer .comp-info .copyright {
   display: flex;
   align-items: center;
@@ -67,4 +77,9 @@ footer .comp-info .copyright {
 footer .comp-info a {
   color: #E6F4F1;
   text-decoration: underline;
+}
+@media (min-width: 825px) and (max-width: 1024px) {
+  footer nav {
+    height: 275px;
+  }
 }/*# sourceMappingURL=footer.css.map */
