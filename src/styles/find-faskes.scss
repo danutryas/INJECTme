@@ -5,11 +5,11 @@
 
 .find-container {
     @include constructor();
-    margin-top: 140px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 100px;
+    margin-top: 140px;
     h1 {
         text-align: center;
         color: $c-accent;
@@ -25,8 +25,8 @@
         align-items: center;
         & .card {
             border: none;
-            height: 140px;
-            width: 80vw;
+            height: auto;
+            width: 100%;
             background-color: $c-main;
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
         }
@@ -42,6 +42,7 @@
             }
             form {
                 display: flex;
+                width: auto;
                 gap: 2rem;
                 button {
                     font-weight: 500;
@@ -66,6 +67,7 @@
                     background-size: 1ex;
                     background-origin: content-box;
                     background-size: 3%;
+                    min-width: 150px;
                 }
             }
         }
@@ -96,7 +98,10 @@
             background-color: $c-mandatory40;
             padding: 15px 30px;
             border-radius: 15px;
-            width: 605px;
+            width: max-content;
+            max-width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
             .category {
                 @include centering();
                 flex-direction: column;
@@ -135,7 +140,6 @@
                 }
             }
         }
-        // @include media()
     }
     .faskes-list {
         display: grid;
@@ -251,18 +255,48 @@
         }
     }   
 
-    @include media('>tablet-lg','<=desktop') {
+    @include media('>desktop','<=desktop-lg') {
         margin-top: 140px;
     }
-    @include media('>tablet','<=tablet-lg') {
-        
-    }
-    @include media('>phone','<=tablet') {
+    @include media('<=desktop') {
+        margin-top: 140px;
+        .search-section {
+            .search {
+                gap: 1.5rem;
+                text-align: center;
+                form { 
+                    flex-direction: column;
+                    gap: 1rem;
+                    button {
+                        width: 50%;
+                        margin: 0 auto;
+                    }
+                    input,select {
+                        height: 45px;
+                    }
+                }
+            }
+        }
 
+
+    }
+    @include media('<=tablet-lg') {
+        section.categories {
+            .category {
+                width: 25%;
+            }
+        }
+    }
+    @include media('<=tablet') {
+        section.categories {
+            align-items: center;
+
+        }
     }
 
 
     @include media("<=phone"){
+        margin-top: 140px;
     
     }
 }

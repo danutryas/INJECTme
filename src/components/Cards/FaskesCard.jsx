@@ -6,8 +6,6 @@ import {motion} from 'framer-motion'
 
 function FaskesCard({jenis,name,kota,provinsi,status,lat,long}) {
   const { activateModal } = useContext(ModalContext)
-
-
   return (
     <motion.div className='faskes-card' 
       initial={{opacity:0,y:50}}

@@ -27,7 +27,7 @@ function Header() {
   }
   
   useEffect(() => {
-    window.addEventListener('scroll', positionHandle, { passive: true });
+    window.addEventListener('scroll', positionHandle);
   }, []);
   
 

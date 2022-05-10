@@ -20,11 +20,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
-  height: 380px;
+  height: auto;
   border: none;
   display: flex;
   flex-direction: column;
   padding: 25px;
+  max-width: 90vw;
 }
 .modal .card .content {
   display: flex;
@@ -82,6 +83,18 @@
   color: rgba(230, 244, 241, 0.6);
   font-size: 16px;
   line-height: 24px;
+}
+@media (max-width: 310px) {
+  .modal .card .info {
+    gap: 8px;
+  }
+  .modal .card .info p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .modal .card .download button {
+    font-size: 14px;
+  }
 }
 
 .btn {
