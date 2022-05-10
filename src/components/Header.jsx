@@ -5,6 +5,7 @@ import ModalContext from './Context/ModalContext'
 import ScrollContext from './Context/ScrollContext'
 import { HashLink as Link } from 'react-router-hash-link';
 import {HiArrowNarrowRight} from 'react-icons/hi'
+import {GiHamburgerMenu} from 'react-icons/gi'
 import { IconContext } from 'react-icons'
 import {motion} from 'framer-motion'
 
@@ -14,6 +15,7 @@ function Header() {
   const {scrollPosition} = useContext(ScrollContext)
   const findMatch = useMatch('/find')
   const [headerPosition,setHeaderPosition] = useState(0)
+  const [mobileNavigation,setMobileNavigation] = useState(false)
   const [positionState,setPositionState] = useState({
     home : 0,
     urgency : 958,
@@ -30,6 +32,9 @@ function Header() {
     window.addEventListener('scroll', positionHandle);
   }, []);
   
+  const mobileNavActivation = () => {
+    setMobileNavigation(prev => !prev)
+  }
 
 
   useEffect(() => {
@@ -52,8 +57,9 @@ function Header() {
     window.location.hash = ""
   })
 
+
   return (
-    <motion.header className={headerPosition > 0 ? "active":""}
+    <motion.header className={mobileNavigation ? "mobile-active" : headerPosition > 0 ? "active":""}
       initial={{opacity:0,y:-80}}
       animate={{opacity:1,y:0}}
       exit={{opacity:0,y:-80}}
@@ -83,8 +89,16 @@ function Header() {
                 <HiArrowNarrowRight/>
             </IconContext.Provider>
           </button></li>
+          <li>
+            <button className='btn burger-btn' onClick={mobileNavActivation}>
+            <IconContext.Provider value={{ className:"burger-icon",size:"1.5em"}}>
+              <GiHamburgerMenu />
+            </IconContext.Provider>
+            </button>
+          </li>
         </ul>
       </nav>
+      
     </motion.header>
   )
 }

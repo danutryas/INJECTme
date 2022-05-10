@@ -33,6 +33,18 @@ header {
 header.active {
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.15);
 }
+header.mobile-active {
+  justify-content: center;
+}
+header.mobile-active .logo {
+  display: none;
+}
+header.mobile-active nav > ul > li:nth-child(5) > button {
+  display: none;
+}
+header.mobile-active nav > ul > li:nth-child(6) > button {
+  display: block;
+}
 header .logo {
   display: flex;
   align-items: center;
@@ -118,6 +130,17 @@ header nav ul li button.register:active {
   box-shadow: none;
   background-color: rgba(0, 162, 165, 0.4);
 }
+header nav ul .burger-btn {
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+header nav ul .burger-btn .burger-icon {
+  size: 60px;
+}
 @media (min-width: 825px) and (max-width: 1120px) {
   header {
     padding: 0 3.25em;
@@ -140,7 +163,7 @@ header nav ul li button.register:active {
 }
 @media (max-width: 824px) {
   header nav ul {
-    gap: 0;
+    gap: 10px;
   }
   header nav ul li.active::after {
     display: none;
@@ -148,7 +171,23 @@ header nav ul li button.register:active {
   header nav ul li .nav {
     display: none;
     width: 0;
-    visibility: hidden;
+  }
+  header nav ul li:nth-child(6) > button {
+    display: block;
+  }
+  header.mobile-active nav ul {
+    gap: 5px;
+  }
+  header.mobile-active nav ul li::after {
+    display: block;
+  }
+  header.mobile-active nav ul li .nav {
+    display: block;
+    width: auto;
+    padding: 3px 8px;
+  }
+  header.mobile-active nav ul li:nth-child(6) > button {
+    display: block;
   }
 }
 @media (max-width: 768px) {
