@@ -7,8 +7,12 @@ function Category({src,name,filterCategory,setFilterCategory}) {
 
   const filterSelected = (name) => {
     setFilterCategory(name)
-    const li = document.getElementById("faskes-list").offsetTop
-    window.scrollTo(0,li - 160)
+    try {
+      const li = document.getElementById("faskes-list").offsetTop
+      window.scrollTo(0,li - 160)
+    }catch(err) {
+      console.log(err)
+    }
   }
 
   return (

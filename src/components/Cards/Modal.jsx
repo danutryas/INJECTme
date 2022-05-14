@@ -4,12 +4,12 @@ import {RiCloseFill,RiCheckboxCircleFill} from 'react-icons/ri'
 import {IconContext} from 'react-icons'
 
 function Modal() {
-  const {modalStatus, deactivateModal}  = useContext(ModalContext)
+  const {modalStatus, activeModal}  = useContext(ModalContext)
 
   return (
     <div className={`modal ${modalStatus ? "active":""}`}>
       <div className="card">
-        <button className="close" onClick={() => deactivateModal()}>
+        <button className="close" onClick={(e) => activeModal(e)}>
           <IconContext.Provider value={{  className: "close-button" }}>
             <RiCloseFill />
           </IconContext.Provider>
@@ -23,7 +23,7 @@ function Modal() {
             <h4>Registered</h4>
             <p>Make sure to come 30 minutes before the schedule</p>
           </div>
-          <button className='btn primary download' onClick={() => deactivateModal()}>Download E-Ticket</button>
+          <button className='btn primary download' onClick={(e) => activeModal(e)}>Download E-Ticket</button>
         </div>
       </div>
     </div>

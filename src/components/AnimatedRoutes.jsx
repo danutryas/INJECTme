@@ -10,8 +10,8 @@ function AnimatedRoutes() {
   return (
       <AnimatePresence exitBeforeEnter initial={false}>
         <Routes location={location} key={location.pathname}>
-            <Route path="/" element={<Landing  />}/>
-            <Route path="/find" element={<FindLocation />}/>
+            <Route exact path="/" element={<Landing  />}/>
+            <Route exact path="/find" element={<FindLocation />}/>
         </Routes>
       </AnimatePresence>
   )

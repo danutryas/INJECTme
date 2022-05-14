@@ -18,7 +18,7 @@ function LocationSearch({
       setProvinces(await getpro)
     }
     getProvince();
-  },[])
+  },[setProvinces])
 
 
   const provinceSelected = (e)=> {

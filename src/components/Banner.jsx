@@ -4,7 +4,7 @@ import ModalContext  from './Context/ModalContext'
 import {motion} from 'framer-motion'
 
 function Banner() {
-    const {activateModal} = useContext(ModalContext)
+    const {activeModal} = useContext(ModalContext)
 
 
   return (
@@ -34,7 +34,7 @@ function Banner() {
                 animate={{opacity:1,x:0}}
                 exit={{opacity:0,x:-200}}
                 transition={{delay:.25}}>
-                <button className='btn primary register' onClick={(e)=> activateModal(e)}>Register</button>
+                <button className='btn primary register' onClick={(e)=> activeModal(e)}>Register</button>
                 <a href="#urgency"><button className='btn secondary next' >Find More</button></a>
             </motion.div>
         </div>

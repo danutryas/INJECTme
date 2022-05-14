@@ -5,7 +5,7 @@ import {MdLocationOn} from 'react-icons/md'
 import {motion} from 'framer-motion'
 
 function FaskesCard({jenis,name,kota,provinsi,status,lat,long}) {
-  const { activateModal } = useContext(ModalContext)
+  const { activeModal } = useContext(ModalContext)
   return (
     <motion.div className='faskes-card' 
       initial={{opacity:0,y:50}}
@@ -33,7 +33,7 @@ function FaskesCard({jenis,name,kota,provinsi,status,lat,long}) {
         </div>
       </div>
       <div className="cta">
-        <button className='btn primary' onClick={(e)=> activateModal(e)}>Register</button>
+        <button className='btn primary' onClick={(e)=> activeModal(e)}>Register</button>
         <a href={`https://maps.google.com/?q=${lat},${long}`} target="_blank" rel='noreferrer'>
           View Location
         </a>

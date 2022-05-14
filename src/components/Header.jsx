@@ -9,9 +9,8 @@ import {GiHamburgerMenu} from 'react-icons/gi'
 import { IconContext } from 'react-icons'
 import {motion} from 'framer-motion'
 
-
 function Header() {
-  const {activateModal} = useContext(ModalContext)
+  const {activeModal} = useContext(ModalContext)
   const {scrollPosition} = useContext(ScrollContext)
   const findMatch = useMatch('/find')
   const [headerPosition,setHeaderPosition] = useState(0)
@@ -22,6 +21,7 @@ function Header() {
     vaccines : 1890,
     footer : 2405
   })
+
 
   const positionHandle = () =>{
     const pos = window.pageYOffset
@@ -49,14 +49,9 @@ function Header() {
         footer:footerPosition - 1
       })
     }catch(err) {
-      console.log(err)
+      console.error(err)
     }
   },[])
-
-  useEffect(()=> {
-    window.location.hash = ""
-  })
-
 
   return (
     <motion.header className={mobileNavigation ? "mobile-active" : headerPosition > 0 ? "active":""}
@@ -83,7 +78,7 @@ function Header() {
           <li className={findMatch ? "active":""}>
             <Link to={"/find#"} className='nav'>Vaccine Location</Link>
           </li>
-          <li><button className='btn primary register' onClick={(e)=> activateModal(e)}>
+          <li><button className='btn primary register' onClick={(e)=> activeModal(e)}>
             Register
             <IconContext.Provider value={{ className:"arrow-btn"}}>
                 <HiArrowNarrowRight/>

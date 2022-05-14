@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function BenefitCard({src,icon,title,desc}) {
+function BenefitCard({src,title,desc}) {
   const [activeCard,setActiveCard] = useState(false)
 
   return (
